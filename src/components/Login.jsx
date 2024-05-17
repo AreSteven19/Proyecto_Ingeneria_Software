@@ -1,13 +1,5 @@
 
-import './estilo.css';
-
-
-
-
-
-
-
-
+import '../Estilos/estilo.css';
 
 export function Logininterfaz() {
 
@@ -16,24 +8,37 @@ export function Logininterfaz() {
 
   return (
 
-    <div className="container-principal">
+    <div className="formulario">
+
+      <h1>inicia de sesión</h1>
+
+      <form action="">
+
+        <div className='username'>
+
+          <input type="text" required />
+          <label>Nombre de usuario</label>
+
+        </div>
+
+        <div className='username'>
+
+          <input type="text" required />
+          <label>Ingrese contraseña </label>
+
+        </div>
+
+        <input type="submit" value="iniciar" />
+
+        <div className="registro">
+          ¿No tienes una cuenta? <a href="#">Registro</a>
+        </div>
 
 
-      <div className="formulario">
 
-        <form action="">
 
-          <label>ingrese el usuario:</label>
-          <input type="text" />
+      </form>
 
-          <label>ingrese la constraseña:</label>
-          <input type="text" />
-
-          <button action=''>ingresar</button>
-
-        </form>
-
-      </div>
 
 
     </div>
