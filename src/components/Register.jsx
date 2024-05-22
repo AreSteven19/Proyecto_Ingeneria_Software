@@ -1,7 +1,6 @@
-
-import { Link, Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../Styles/EstiloLogin.css'
-export function LoginC() {
+export function RegisterC() {
 
 
   return (
@@ -10,7 +9,7 @@ export function LoginC() {
 
       <div className="formulario">
 
-        <h1>inicio de sesión</h1>
+        <h1>Bienvenido al Registro</h1>
 
         <form action="">
 
@@ -28,22 +27,15 @@ export function LoginC() {
 
           </div>
 
-          <input type="submit" value="Iniciar Sesión" />
+          <input type="submit" value="Registrarse" />
 
           <div className="registro">
-          ¿No tienes una cuenta? <Link to="/pagina_registro">Registro</Link>
-
+            si quieres volver: <Link to="/">volver</Link>
           </div>
 
 
 
-
         </form>
-
-
-        
-          
-       
 
 
 
@@ -53,4 +45,4 @@ export function LoginC() {
   );
 }
 
-export default LoginC;
+export default RegisterC;

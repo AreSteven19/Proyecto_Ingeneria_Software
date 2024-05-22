@@ -1,11 +1,16 @@
-body{
+*{
     margin: 0;
-    padding: 0px;
+}
+
+.contenido{
+ 
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
-    background-image: url("../imagenes//fondo_login.jpg"); 
+    background-image: url("../Pictures/fondo_login.jpg"); 
     background-size: cover;
     background-repeat: no-repeat;
+    
+
 }
 
 .formulario{
@@ -20,7 +25,7 @@ body{
 
 .formulario h1{
      text-align: center;
-     padding: 0px 0px 20px 0px;
+     padding: 10px 0px 20px 0px;
      border-bottom: 1px solid silver;
 }
 
@@ -103,3 +108,4 @@ transition: .5s;
     font-size: 16px;
     color: black;
 }
+
