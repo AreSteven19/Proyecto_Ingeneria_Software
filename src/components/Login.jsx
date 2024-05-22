@@ -6,7 +6,7 @@ export function LoginC() {
 
   return (
 
-    <div className="contenido">
+    <div className="contenidoL">
 
       <div className="formulario">
 

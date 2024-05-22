@@ -2,16 +2,24 @@
     margin: 0;
 }
 
-.contenido{
+.contenidoL{
  
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
-    background-image: url("../Pictures/fondo_login.jpg"); 
-    background-size: cover;
+    background-image: url("../Pictures/fondo_login1.jpg"); 
+    background-size: 100%;
     background-repeat: no-repeat;
-    
-
 }
+
+.contenidoR{
+ 
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-image:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../Pictures/fondo_registrar.png"); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
 
 .formulario{
     position: absolute;

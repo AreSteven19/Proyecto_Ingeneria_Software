@@ -5,7 +5,7 @@ export function RegisterC() {
 
   return (
 
-    <div className="contenido">
+    <div className="contenidoR">
 
       <div className="formulario">
 
