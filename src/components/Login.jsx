@@ -1,8 +1,8 @@
 
-import { Link, Router } from 'react-router-dom';
-import '../Styles/EstiloLogin.css'
-export function LoginC() {
+import { Link } from 'react-router-dom';
+import '../Styles/EstiloLogin.css';
 
+export function LoginC() {
 
   return (
 
@@ -35,17 +35,7 @@ export function LoginC() {
 
           </div>
 
-
-
-
         </form>
-
-
-        
-          
-       
-
-
 
       </div>
 
