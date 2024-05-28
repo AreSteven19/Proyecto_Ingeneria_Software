@@ -16,14 +16,44 @@ export function RegisterC() {
           <div className='username'>
 
             <input type="text" required />
-            <label>Nombre de usuario</label>
+            <label>Nombre</label>
 
           </div>
 
           <div className='username'>
 
+            <input type="text" required />
+            <label>Primer apellido</label>
+
+          </div>
+
+          <div className='username'>
+
+            <input type="text" required />
+            <label>Segundo apellido</label>
+
+          </div>
+
+          <div className='username'>
+
+            <input type="text" required />
+            <label>Correo Electrónico</label>
+
+          </div>
+
+
+
+          <div className='username'>
+
             <input type="password" required />
-            <label>Ingrese contraseña </label>
+            <label>Contraseña</label>
+
+          </div>
+
+          <div className='username'>
+
+            <input type="number" required />
+            <label>Número de teléfono</label>
 
           </div>
 

@@ -17,21 +17,21 @@ export function LoginC() {
           <div className='username'>
 
             <input type="text" required />
-            <label>Nombre de usuario</label>
+            <label>Correo Electrónico</label>
 
           </div>
 
           <div className='username'>
 
             <input type="password" required />
-            <label>Ingrese contraseña </label>
+            <label>Contraseña </label>
 
           </div>
 
           <input type="submit" value="Iniciar Sesión" />
 
           <div className="registro">
-          ¿No tienes una cuenta? <Link to="/pagina_registro">Registro</Link>
+            ¿No tienes una cuenta? <Link to="/pagina_registro">Registro</Link>
 
           </div>
 
@@ -41,9 +41,9 @@ export function LoginC() {
         </form>
 
 
-        
-          
-       
+
+
+
 
 
 
