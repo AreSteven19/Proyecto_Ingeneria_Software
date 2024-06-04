@@ -1,0 +1,10 @@
+.Contenido_Navbar{
+    background-color: red;
+    height: 100px;
+    display: flex;
+    width: 100%;
+    
+    
+    align-items: center;
+    
+}
