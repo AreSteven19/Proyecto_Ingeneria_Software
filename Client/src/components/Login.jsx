@@ -4,8 +4,10 @@ import '../Styles/EstiloLogin.css'
 export function LoginC() {
 
 
+
   return (
 
+    
     <div className="contenidoL">
 
       <div className="formulario">
@@ -34,6 +36,7 @@ export function LoginC() {
             ¿No tienes una cuenta? <Link to="/pagina_registro">Registro</Link>
 
           </div>
+        
 
        
        
