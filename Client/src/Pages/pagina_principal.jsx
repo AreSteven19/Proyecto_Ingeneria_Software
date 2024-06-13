@@ -1,6 +1,6 @@
 
 import '../Styles/EstiloLogin.css'
-import {Navbar} from '../components/Navbar'
+import {Navbar2} from '../components/Navbar2'
 
 export function PaginaP() {
 
@@ -9,7 +9,7 @@ export function PaginaP() {
 
     <div className="contenido">
         
-        <Navbar></Navbar>
+        <Navbar2></Navbar2>
 
 
     </div>
