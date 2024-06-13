@@ -5,7 +5,7 @@ import '../Styles/EstiloNavbar.css';
 import image from '../Pictures/image.png';
 import icousuario from '../Pictures/icousuario.png';
 
-export function Navbar() {
+export function Navbar2() {
 
   
  
@@ -59,4 +59,4 @@ export function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar2;
