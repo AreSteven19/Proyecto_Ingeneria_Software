@@ -11,7 +11,7 @@
 
 .Container_Bienvenido {
   width: 100%;
-  height: 87vh;
+  height: 100%;
   display: flex;
   flex-direction: row;
 }
