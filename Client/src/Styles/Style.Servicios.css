@@ -12,10 +12,86 @@
   padding: 0;
 }
 
-.Container_Servicios {
+.container_Servicios {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+}
+
+.container_tittleServicios {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+
+.title_Servicios {
+  font-family: "Michroma", sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  background-color: chartreuse;
+}
+
+.container_Cards {
+  width: 95%;
+  height: 65%;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  background-color: blue;
+}
+
+.card {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+  background-color: blueviolet;
+}
+
+.card > #logoCard {
+  width: 40%;
+  height: 30%;
   background-color: brown;
+}
+
+.card > #tittleCard {
+  width: 80%;
+  height: 30%;
+  background-color: brown;
+}
+
+.card > #descriptionCard {
+  width: 80%;
+  height: 30%;
+  background-color: brown;
+}
+
+.container_Btn {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+}
+
+.Button_Bienvenido {
+  width: 350px;
+  height: 75px;
+  background-color: #dd8f13;
+  color: white;
+  font-family: "Michroma", sans-serif;
+  font-size: 30px;
+  border-radius: 10px;
+  border-color: #808080;
 }
