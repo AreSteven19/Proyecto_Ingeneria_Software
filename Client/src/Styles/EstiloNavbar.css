@@ -12,6 +12,7 @@
   align-items: center;
   min-width: 320px;
   position: fixed;
+  top: 0;
 }
 
 .links {
