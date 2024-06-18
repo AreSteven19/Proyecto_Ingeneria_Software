@@ -8,9 +8,9 @@ export default function Servicios() {
       </div>
       <div className="container_Cards">
         <div className="card">
-          <div id="logoCard"></div>
+          <div className="logoCards"></div>
           <div id="tittleCard">
-            <p>Cortes</p>
+            <p>CORTES</p>
           </div>
           <div id="descriptionCard">
             <p>Todo tipo de cortes y sombras</p>
@@ -18,32 +18,32 @@ export default function Servicios() {
         </div>
 
         <div className="card">
-          <div id="logoCard"></div>
+          <div className="logoCards"></div>
           <div id="tittleCard">
-            <p>Cortes</p>
+            <p>BARBA</p>
           </div>
           <div id="descriptionCard">
-            <p>Todo tipo de cortes y sombras</p>
+            <p>Todo tipo de marcados y estilos</p>
           </div>
         </div>
 
         <div className="card">
-          <div id="logoCard"></div>
+          <div className="logoCards"></div>
           <div id="tittleCard">
-            <p>Cortes</p>
+            <p>SPÁ</p>
           </div>
           <div id="descriptionCard">
-            <p>Todo tipo de cortes y sombras</p>
+            <p>Limpieza facial, Barba spá</p>
           </div>
         </div>
 
         <div className="card">
-          <div id="logoCard"></div>
+          <div className="logoCards"></div>
           <div id="tittleCard">
-            <p>Cortes</p>
+            <p>CEJAS</p>
           </div>
           <div id="descriptionCard">
-            <p>Todo tipo de cortes y sombras</p>
+            <p>Definición marcado y más</p>
           </div>
         </div>
       </div>
