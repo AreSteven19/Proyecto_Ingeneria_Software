@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: red;
 }
 
 .container_tittleServicios {
@@ -28,23 +27,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
 }
 
 .title_Servicios {
   font-family: "Michroma", sans-serif;
   font-size: 50px;
   font-weight: 900;
-  background-color: chartreuse;
 }
 
 .container_Cards {
   width: 95%;
-  height: 65%;
+  height: 60%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: blue;
 }
 
 .card {
@@ -55,34 +51,131 @@
   justify-content: center;
   align-items: center;
   row-gap: 10px;
-  background-color: blueviolet;
+  background-color: #f0f0f0;
+  transition: all 0.5s ease-out;
 }
 
-.card > #logoCard {
-  width: 40%;
-  height: 30%;
-  background-color: brown;
+.card:nth-child(1):hover {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../Pictures/corteHover.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.card:nth-child(2):hover {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../Pictures/barbaHover.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.card:nth-child(3):hover {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../Pictures/spaHover.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+}
+
+.card:nth-child(4):hover {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../Pictures/cejasHover.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.logoCards {
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:nth-child(1) .logoCards {
+  background-image: url("../Pictures/scissors.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.card:nth-child(2) .logoCards {
+  background-image: url("../Pictures/maquinita.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  transform: rotate(-45deg);
+}
+
+.card:nth-child(3) .logoCards {
+  background-image: url("../Pictures/spá.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.card:nth-child(4) .logoCards {
+  background-image: url("../Pictures/ojos.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 .card > #tittleCard {
   width: 80%;
   height: 30%;
-  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Michroma", sans-serif;
+  font-size: 25px;
 }
 
 .card > #descriptionCard {
   width: 80%;
   height: 30%;
-  background-color: brown;
+  text-align: center;
+  font-family: "Michroma", sans-serif;
+  font-size: 20px;
+}
+
+.card:nth-child(3) #descriptionCard {
+  width: 70%;
+}
+
+.card:nth-child(4) #descriptionCard {
+  width: 70%;
 }
 
 .container_Btn {
   width: 100%;
-  height: 15%;
+  height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: yellow;
 }
 
 .Button_Bienvenido {
