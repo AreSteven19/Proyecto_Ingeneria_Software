@@ -2,18 +2,22 @@ import { Link } from 'react-router-dom';
 import '../Styles/EstiloLogin.css';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import {createClient} from '../api/client.api';
+
+
 
 export function RegisterC() {
 
   const navigate = useNavigate();
 
   const DatosUsuarioR = {
-    nombre: '',
-    primerapellido: '',
-    segundoapellido: '',
-    correo: '',
-    contra: '',
-    numero: '',
+    name: '',
+    lastname1: '',
+    lastname2: '',
+    email: '',
+    password: '',
+    telefeno: '',
+    fk_id_role: 1,
   };
 
   const [EstadoRegistro, setDatos] = useState(DatosUsuarioR);
@@ -23,11 +27,18 @@ export function RegisterC() {
     setDatos({ ...EstadoRegistro, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =  async (e) => {
     e.preventDefault();
-    console.log(EstadoRegistro);
+    //console.log(EstadoRegistro);
     alert("¡Registro enviado!");
      navigate("/");
+     try {
+      console.log(EstadoRegistro);
+      const response = await createClient(EstadoRegistro)
+      //console.log("Datos guardados",response.data)
+  } catch (error) {
+      console.error("Error al guardar datos",error)
+  }
   };
 
   return (
@@ -41,7 +52,7 @@ export function RegisterC() {
           <div className='username'>
             <input
               type="text"
-              name="nombre"
+              name="name"
               required
               onChange={GuardarDatos}
               value={EstadoRegistro.nombre}
@@ -53,7 +64,7 @@ export function RegisterC() {
           <div className='username'>
             <input
               type="text"
-              name="primerapellido"
+              name="lastname1"
               required
               onChange={GuardarDatos}
               value={EstadoRegistro.primerapellido}
@@ -65,7 +76,7 @@ export function RegisterC() {
           <div className='username'>
             <input
               type="text"
-              name="segundoapellido"
+              name="lastname2"
               required
               onChange={GuardarDatos}
               value={EstadoRegistro.segundoapellido}
@@ -77,7 +88,7 @@ export function RegisterC() {
           <div className='username'>
             <input
               type="text"
-              name="correo"
+              name="email"
               required
               onChange={GuardarDatos}
               value={EstadoRegistro.correo}
@@ -89,7 +100,7 @@ export function RegisterC() {
           <div className='username'>
             <input
               type="password"
-              name="contra"
+              name="password"
               required
               onChange={GuardarDatos}
               value={EstadoRegistro.contra}
@@ -101,7 +112,7 @@ export function RegisterC() {
           <div className='username'>
             <input
               type="number"
-              name="numero"
+              name="telefono"
               required
               onChange={GuardarDatos}
               value={EstadoRegistro.numero}
