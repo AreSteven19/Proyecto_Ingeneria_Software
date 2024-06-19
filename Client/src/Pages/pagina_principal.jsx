@@ -3,7 +3,7 @@ import "../Styles/EstiloLogin.css";
 import Jumbotron from "../components/Jumbotron";
 import Bienvenido from "../components/Bienvenido";
 import Servicios from "../components/Servicios";
-import {Navbar2} from '../components/Navbar2'
+import {Navbar2} from '../components/Navbar2';
 
 
 export function PaginaP() {
