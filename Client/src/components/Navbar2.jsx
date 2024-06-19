@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import "../Styles/EstiloNavbar.css";
 
 import image from "../Pictures/image.png";
-import icousuario from "../Pictures/icousuario.png";
 
 export function Navbar2() {
   const [visible, setVisible] = useState(false);

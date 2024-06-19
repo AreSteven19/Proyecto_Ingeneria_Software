@@ -11,14 +11,17 @@
 
 .Container_Bienvenido {
   width: 100%;
-  height: calc(100vh - 30px);
+  height: calc(100vh - 100px);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
 }
 
 .ImgBienvenido {
-  width: 45%;
-  height: 100%;
+  width: 100%;
+  height: 80%;
   background-image: url("../Pictures/bg_Bienvenido.jpg");
   background-position: center top;
   background-repeat: no-repeat;
@@ -26,7 +29,7 @@
 }
 
 .textBienvenido {
-  width: 55%;
+  width: 95%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -35,42 +38,46 @@
 }
 
 .containerTextos {
-  width: 95%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 30px;
+  row-gap: 10px;
 }
 
 .containerTextos > #titleBienvenido {
   font-family: "Michroma", sans-serif;
-  font-size: 45px;
+  font-size: 20px;
   text-align: center;
 }
 
 .containerTextos > #subtitleBienvenido {
+  width: 70%;
   font-family: "Michroma", sans-serif;
-  font-size: 25px;
+  font-size: 12px;
   text-align: center;
   color: #dd8f13;
 }
 
 .containerTextos > #descriptionBienvenido {
-  width: 80%;
+  width: 95%;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 20px;
+  font-size: 12px;
   text-align: center;
 }
 
 .Button_Bienvenido {
-  width: 350px;
-  height: 80px;
+  width: 50%;
+  min-width: 200px;
+  max-width: 280px;
+  height: 10%;
+  min-height: 50px;
   background-color: #dd8f13;
   color: white;
   font-family: "Michroma", sans-serif;
-  font-size: 30px;
+  font-size: 18px;
   border-radius: 10px;
   border-color: white;
 }
