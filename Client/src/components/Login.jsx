@@ -1,15 +1,14 @@
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../Styles/EstiloLogin.css";
 import { useNavigate } from "react-router-dom";
 
 export function LoginC() {
-
+  const navigate = useNavigate();
   const handleClick = () => {
     navigate("/pagina_principal");
   };
 
   return (
-
     <div className="contenidoL">
       <div className="formulario">
         <h1>inicio de sesión</h1>
@@ -30,13 +29,6 @@ export function LoginC() {
           <div className="registro">
             ¿No tienes una cuenta? <Link to="/pagina_registro">Registro</Link>
           </div>
-
-       
-       
-
-
-
-
         </form>
       </div>
     </div>
