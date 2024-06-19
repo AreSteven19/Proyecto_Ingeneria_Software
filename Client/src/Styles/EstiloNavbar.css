@@ -1,19 +1,45 @@
 .CNav {
-<<<<<<< HEAD
   width: 100%;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  min-width: 280px;
 }
 
 .Navbar {
-  background-color: rgb(0, 0, 0);
-  height: 60px;
+  height: 100%;
+  width: 95%;
   display: flex;
-  width: 100%;
-  justify-content: space-around;
-  padding: 10px 0;
+  justify-content: space-between;
   align-items: center;
-  min-width: 320px;
-  position: fixed;
-  top: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: rgb(0, 0, 0);
+}
+
+.containerLinks {
+  display: none;
+}
+
+.menu {
+  width: 15%;
+  height: 50%;
+  background-color: rgb(0, 0, 0);
+  background-image: url("../Pictures/iconMenu.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: outset 2px white;
+  border-radius: 4px;
+  transition: all 0.5 ease-in-out;
+  cursor: pointer;
+}
+
+.menu:hover {
+  transform: scale(1.1);
 }
 
 .links {
@@ -22,21 +48,9 @@
   color: white;
 }
 
-#icouse {
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-left: 5%;
-}
-
 #logoempresa {
   height: 80px;
   width: 80px;
-}
-
-#icousuario {
-  height: 30px;
-  width: 30px;
 }
 
 .dropdown {
@@ -45,179 +59,109 @@
 }
 
 .dropdown-content {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
   position: absolute;
   right: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  top: 70px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.dropdown-content2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-size: 20px;
+  font-family: "Michroma", sans-serif;
+}
+
+.dropdown-content2 a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Michroma", sans-serif;
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #dd8f13;
 }
 
-@media (max-width: 523px) {
-  .links {
-    font-size: 25px;
-  }
-
-  #logoempresa {
-    height: 70px;
-    width: 70px;
-  }
-
-  #icousuario {
-    height: 20px;
-    width: 20px;
-  }
-
-  .Navbar {
-    height: 80%;
-    width: 100%;
-  }
+.dropdown-content2 a:hover {
+  background-color: #dd8f13;
 }
 
-@media (max-width: 380px) {
-  .links {
-    font-size: 17px;
-  }
+.btnUser {
+  display: none;
+}
 
-  #logoempresa {
-    height: 60px;
+@media screen and (width > 375px) {
+  .menu {
     width: 60px;
+    height: 60px;
   }
 
-  #icousuario {
-    height: 20px;
-    width: 20px;
-  }
-
-  .Navbar {
-    height: 70%;
-    width: 100%;
+  .dropdown-content {
+    width: 30%;
   }
 }
-=======
-    width: 100%;
+@media screen and (width > 768px) {
+  .menu {
+    display: none;
   }
- 
-  .Navbar {
-    background-color: rgb(0, 0, 0);
-    height: 100px;
+
+  .containerLinks {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
-    padding: 10px 0;
+    flex-direction: row;
+    column-gap: 20px;
+    width: 80%;
+    height: 50%;
+    justify-content: center;
     align-items: center;
-    min-width: 320px;
   }
-  
-  .links {
-    font-size: 30px;
+
+  #link {
     text-decoration: none;
     color: white;
+    font-size: 30px;
+    font-family: "Michroma", sans-serif;
   }
-  
-  #icouse {
-    background: none; 
-    border: none; 
-    cursor: pointer;
-    margin-left: 5%;
+
+  .btnUser {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    background-image: url("../Pictures/iconUser.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
   }
-  
-  #logoempresa {
-    height: 120px;
-    width: 120px;
-  }
-  
-  #icousuario {
-    height: 30px;
-    width: 30px;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
+
   .dropdown-content {
-    display: block;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    width: 20%;
   }
 
-  @media (max-width: 523px){
-
-    .links {
-      font-size: 25px;
-     
-    }
-
-    #logoempresa {
-      height: 70px;
-      width: 70px;
-    }
-    
-    #icousuario {
-      height: 20px;
-      width: 20px;
-    }
-
-    .Navbar {
-      height: 80%;
-      width: 100%;
-    }
-    
+  .dropdown-content2 {
+    width: 30%;
   }
-  
+}
 
-
-  @media (max-width: 380px){
-
-    .links {
-      font-size: 17px;
-     
-    }
-
-    #logoempresa {
-      height: 60px;
-      width: 60px;
-    }
-    
-    #icousuario {
-      height: 20px;
-      width: 20px;
-    }
-
-    .Navbar {
-      height: 70%;
-      width: 100%;
-
-    }
-    
-  }
->>>>>>> d54fe92c5e1ccf5bcdd1c27c15f55ac2ee9bff9e
+@media screen and (width > 1024px) {
+}
