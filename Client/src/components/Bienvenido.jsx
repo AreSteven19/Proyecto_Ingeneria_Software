@@ -1,9 +1,12 @@
 import "../Styles/Style.Bienvenido.css";
+import bgBienvenido from "../Pictures/bg_Bienvenido.jpg";
 
 export default function Bienvenido() {
   return (
     <div className="Container_Bienvenido">
-      <div className="ImgBienvenido"></div>
+      <div className="ImgBienvenido">
+        <img className="bg_Bienvenido" src={bgBienvenido} alt="bg_Bienvenido" />
+      </div>
 
       <div className="textBienvenido">
         <div className="containerTextos">
