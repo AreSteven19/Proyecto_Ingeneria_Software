@@ -6,16 +6,12 @@ import { Navbar2 } from "../components/Navbar2";
 
 export function PaginaP() {
   return (
-    <div className="contenido" style={{ marginTop: "70px" }}>
+    <div className="contenido" style={{ height: "100%" }}>
       <Navbar2></Navbar2>
-      <div className="bodyPrincipal" style={{ height: "calc(100vh - 60px)" }}>
+      <div className="bodyPrincipal" style={{ height: "calc(100vh - 90px)" }}>
         <Jumbotron />
-        <Bienvenido />
-        <Servicios />
-      </div>
-
-      <div className="contenido">
-        <Navbar2></Navbar2>
+        {/* <Bienvenido /> */}
+        {/* <Servicios /> */}
       </div>
     </div>
   );

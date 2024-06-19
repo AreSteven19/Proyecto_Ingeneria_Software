@@ -7,9 +7,14 @@ import icousuario from "../Pictures/icousuario.png";
 
 export function Navbar2() {
   const [visible, setVisible] = useState(false);
+  const [visible2, setVisible2] = useState(false);
 
   const cambiarEstado = () => {
     setVisible(!visible);
+  };
+
+  const cambiarEstado2 = () => {
+    setVisible2(!visible2);
   };
 
   return (
@@ -40,7 +45,15 @@ export function Navbar2() {
           <Link to="/">Perfil</Link>
         </div>
 
-        <button className="btnUser"></button>
+        <button className="btnUser" onClick={cambiarEstado2}></button>
+        <div
+          className="dropdown-content2"
+          style={{ display: visible2 ? "flex" : "none" }}
+        >
+          <Link to="/">Perfil</Link>
+          <Link to="/">Configuraciones</Link>
+          <Link to="/">Cerrar Sesión</Link>
+        </div>
       </nav>
     </div>
   );
