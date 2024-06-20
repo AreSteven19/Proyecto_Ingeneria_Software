@@ -2,7 +2,7 @@ import "../Styles/Style.Jumbotron.css";
 
 export default function Jumbotron() {
   return (
-    <div className="Container_Jumbotron">
+    <section id="jumbotron" className="Container_Jumbotron">
       <div className="textJumbotron">
         <h1 className="Title_Jumbotron">Geo´s</h1>
         <h2 className="Subtitle_Jumbotron">BARBER SHOP</h2>
@@ -12,6 +12,6 @@ export default function Jumbotron() {
       </div>
 
       <button className="Button_Jumbotron">Sobre nosotros</button>
-    </div>
+    </section>
   );
 }
