@@ -16,9 +16,9 @@ export const getClients = async (req, res) => {
 export const getClient = async (req, res) => {
    
    try {
-    const [resul] = await pool.query("select *from client where id= ?",
-        [req.params.id]);
+    const [resul] = await pool.query("select *from client where email= ? && password  = ?",[req.params.email,req.params.password]);
 
+    
     res.json(resul);
    } catch (error) {
     return res.status(500).json({massage:error.message});
@@ -43,6 +43,7 @@ export const createClient = async (req, res) => {
     }
 
 }
+
 export const updateClient =  async (req, res) => {
     try {
         const resul = await pool.query("update client set ? where id = ?",

@@ -16,10 +16,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 280px;
+  min-width: 300px;
 }
 
-.ImgBienvenido {
+.containerBg {
   width: 100%;
   height: 50%;
   display: flex;
@@ -34,7 +34,7 @@
   object-fit: cover;
 }
 
-.textBienvenido {
+.textsBienvenido {
   width: 100%;
   height: 50%;
   display: flex;
@@ -45,12 +45,12 @@
 
 .containerTextos {
   width: 100%;
-  height: 100%;
+  height: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 15px;
+  row-gap: 5px;
 }
 
 .containerTextos > #titleBienvenido {
@@ -75,94 +75,117 @@
   text-align: center;
 }
 
+.ContainerButton {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .Button_Bienvenido {
-  width: 50%;
   min-width: 200px;
-  max-width: 280px;
-  height: 10%;
-  min-height: 50px;
+  min-height: 60px;
   background-color: #dd8f13;
   color: white;
   font-family: "Michroma", sans-serif;
-  font-size: 18px;
+  font-size: 25px;
   border-radius: 10px;
   border-color: #808080;
-}
-
-@media screen and (width > 375px) {
-  .ImgBienvenido {
-    height: 100%;
-  }
-
-  .bg_Bienvenido {
-    width: 100%;
-  }
-
-  .Button_Bienvenido {
-    margin-bottom: 10px;
-  }
 }
 
 @media screen and (width > 415px) {
   .Container_Bienvenido {
     flex-direction: row;
+    height: calc(100vh - 85px);
   }
 
-  .ImgBienvenido {
+  .containerBg {
     width: 50%;
+    height: 100%;
   }
 
-  .textBienvenido {
+  .textsBienvenido {
     width: 50%;
+    height: 100%;
+  }
+
+  .containerTextos {
+    height: 85%;
+    row-gap: 20px;
   }
 
   .containerTextos > #titleBienvenido {
-    width: 100%;
-    max-width: 320px;
+    width: 95%;
+    max-width: 310px;
     font-size: 25px;
   }
 
   .containerTextos > #subtitleBienvenido {
-    width: 100%;
-    max-width: 340px;
-    font-size: 20px;
-  }
-
-  .containerTextos > #descriptionBienvenido {
-    width: 100%;
-    max-width: 340px;
+    width: 95%;
+    max-width: 310px;
     font-size: 18px;
   }
 
-  .containerTextos {
-    height: 100vh;
-    row-gap: 5px;
+  .containerTextos > #descriptionBienvenido {
+    width: 95%;
+    max-width: 310px;
+    min-width: 190px;
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .ContainerButton {
+    height: 15%;
+  }
+  .Button_Bienvenido {
+    width: 75%;
+    max-width: 200px;
+    font-size: 30px;
   }
 }
 
 @media screen and (width > 768px) {
+  .textsBienvenido {
+    width: 40%;
+  }
+
+  .containerBg {
+    width: 60%;
+  }
+
   .containerTextos {
-    row-gap: 40px;
+    width: 100%;
+    row-gap: 25px;
   }
 
   .containerTextos > #titleBienvenido {
-    font-size: 30px;
-    min-width: 370px;
+    font-size: 25px;
+    min-width: 295px;
+    width: 98%;
   }
 
   .containerTextos > #subtitleBienvenido {
     font-size: 20px;
-    min-width: 370px;
+    min-width: 295px;
+    width: 98%;
   }
 
   .containerTextos > #descriptionBienvenido {
-    font-size: 20px;
-    min-width: 370px;
+    font-size: 18px;
+    min-width: 295px;
+    width: 98%;
+  }
+
+  .ContainerButton {
+    height: 15%;
   }
 
   .Button_Bienvenido {
-    margin-bottom: 10px;
     height: 70px;
+    width: 75%;
+    max-width: 300px;
     font-size: 30px;
   }
 
@@ -172,6 +195,14 @@
 }
 
 @media screen and (width > 1024px) {
+  .textsBienvenido {
+    width: 50%;
+  }
+
+  .containerBg {
+    width: 50%;
+  }
+
   .containerTextos {
     row-gap: 25px;
   }
@@ -191,10 +222,13 @@
     min-width: 500px;
   }
 
+  .ContainerButton {
+    height: 20%;
+  }
+
   .Button_Bienvenido {
-    margin-bottom: 10px;
     height: 80px;
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .Button_Bienvenido:hover {

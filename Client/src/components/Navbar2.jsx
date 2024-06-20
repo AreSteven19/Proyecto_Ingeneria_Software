@@ -4,7 +4,7 @@ import "../Styles/EstiloNavbar.css";
 
 import image from "../Pictures/image.png";
 
-export function Navbar2() {
+export function Navbar2({ activeSection }) {
   const [visible, setVisible] = useState(false);
   const [visible2, setVisible2] = useState(false);
 
@@ -22,13 +22,26 @@ export function Navbar2() {
         <img src={image} alt="Logo Empresa" id="logoempresa" />
 
         <div className="containerLinks">
-          <Link id="link" to="/">
+          <Link
+            id="link"
+            to="#jumbotron"
+            className={activeSection === "jumbotron" ? "active" : ""}
+          >
             Inicio
           </Link>
-          <Link id="link" to="/">
+          <Link
+            id="link"
+            to="#servicios"
+            className={activeSection === "servicios" ? "active" : ""}
+          >
             Servicios
           </Link>
-          <Link id="link" to="/">
+          <Link
+            id="link"
+            // to="/"
+            className={activeSection === "section1" ? "active" : ""}
+            href="#section1"
+          >
             Contacto
           </Link>
         </div>

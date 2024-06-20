@@ -143,6 +143,10 @@
     font-family: "Michroma", sans-serif;
   }
 
+  #link.active {
+    color: #dd8f13;
+  }
+
   .btnUser {
     display: flex;
     width: 80px;

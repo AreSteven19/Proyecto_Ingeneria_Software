@@ -2,7 +2,7 @@ import "../Styles/Style.Servicios.css";
 
 export default function Servicios() {
   return (
-    <div className="container_Servicios">
+    <section id="servicios" className="container_Servicios">
       <div className="container_tittleServicios">
         <p className="title_Servicios">Nuestros Servicios</p>
       </div>
@@ -50,6 +50,6 @@ export default function Servicios() {
       <div className="container_Btn">
         <button className="Button_Bienvenido">Reservar</button>
       </div>
-    </div>
+    </section>
   );
 }

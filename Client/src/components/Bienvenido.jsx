@@ -3,12 +3,12 @@ import bgBienvenido from "../Pictures/bg_Bienvenido.jpg";
 
 export default function Bienvenido() {
   return (
-    <div className="Container_Bienvenido">
-      <div className="ImgBienvenido">
+    <section id="bienvenido" className="Container_Bienvenido">
+      <dic className="containerBg">
         <img className="bg_Bienvenido" src={bgBienvenido} alt="bg_Bienvenido" />
-      </div>
+      </dic>
 
-      <div className="textBienvenido">
+      <div className="textsBienvenido">
         <div className="containerTextos">
           <p id="titleBienvenido">
             Bienvenido a <strong>Geo'S</strong> Barber shop
@@ -22,9 +22,11 @@ export default function Bienvenido() {
             cuentan con amplia experiencia en todo tipo de sombras, cortes y
             marcados, será un placer atenderle
           </p>
+        </div>
+        <div className="ContainerButton">
           <button className="Button_Bienvenido">Servicios</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

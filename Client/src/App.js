@@ -1,9 +1,10 @@
 import React from "react";
-import LoginC from "./components/Login.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PaginaR from "./Pages/pagina_registro.jsx";
 import Navbar2 from "./components/Navbar2.jsx";
 import PaginaP from "./Pages/pagina_principal.jsx";
+import LoginC from "./components/Login.jsx";
+
 function App() {
   return (
     <div className="App">
