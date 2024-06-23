@@ -54,24 +54,24 @@
 }
 
 .containerTextos > #titleBienvenido {
-  width: 250px;
+  width: 300px;
   font-family: "Michroma", sans-serif;
   font-size: 20px;
   text-align: center;
 }
 
 .containerTextos > #subtitleBienvenido {
-  width: 250px;
+  width: 300px;
   font-family: "Michroma", sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   text-align: center;
   color: #dd8f13;
 }
 
 .containerTextos > #descriptionBienvenido {
-  width: 260px;
+  width: 280px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   text-align: center;
 }
 
@@ -204,11 +204,11 @@
   }
 
   .containerTextos {
-    row-gap: 25px;
+    row-gap: 40px;
   }
 
   .containerTextos > #titleBienvenido {
-    font-size: 40px;
+    font-size: 35px;
     min-width: 500px;
   }
 
@@ -218,7 +218,50 @@
   }
 
   .containerTextos > #descriptionBienvenido {
-    font-size: 24px;
+    font-size: 22px;
+    min-width: 500px;
+  }
+
+  .Button_Bienvenido {
+    font-size: 40px;
+    min-width: 350px;
+    height: 100px;
+  }
+
+  .Button_Bienvenido:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (width >= 1024px) and (orientation: landscape) {
+  .Container_Bienvenido {
+    height: calc(100vh - 100px);
+  }
+
+  .textsBienvenido {
+    width: 50%;
+  }
+
+  .containerBg {
+    width: 50%;
+  }
+
+  .containerTextos {
+    row-gap: 40px;
+  }
+
+  .containerTextos > #titleBienvenido {
+    font-size: 35px;
+    min-width: 500px;
+  }
+
+  .containerTextos > #subtitleBienvenido {
+    font-size: 20px;
+    min-width: 500px;
+  }
+
+  .containerTextos > #descriptionBienvenido {
+    font-size: 22px;
     min-width: 500px;
   }
 

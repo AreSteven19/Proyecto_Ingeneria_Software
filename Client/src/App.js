@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          //para usar las rutas ======= //para usar las rutas
+          {/* //para usar las rutas ======= //para usar las rutas */}
           <Route path="/" element={<LoginC />} />
           <Route path="/pagina_registro" element={<PaginaR />} />
           <Route path="/pagina_principal" element={<PaginaP />} />

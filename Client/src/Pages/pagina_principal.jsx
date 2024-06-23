@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "../Styles/EstiloLogin.css";
 import Jumbotron from "../components/Jumbotron";
@@ -31,9 +31,31 @@ export function PaginaP() {
   }, []);
 
   return (
-    <div className="contenido" style={{ height: "100%" }}>
-      <Navbar2 />
-      <div className="bodyPrincipal" style={{ height: "calc(100vh - 90px)" }}>
+    <div
+      style={{
+        display: "flex",
+        height: "100vh",
+        width: "100%",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          height: "100px",
+          width: "100%",
+          position: "fixed",
+          zIndex: 1,
+        }}
+      >
+        <Navbar2 />
+      </div>
+
+      <div
+        style={{
+          height: "100%",
+          width: "100%",
+        }}
+      >
         <Jumbotron />
         <Bienvenido />
         <Servicios />

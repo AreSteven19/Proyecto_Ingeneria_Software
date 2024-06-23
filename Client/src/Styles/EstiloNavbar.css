@@ -1,23 +1,17 @@
-.CNav {
-  width: 100%;
-  height: 85px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  min-width: 280px;
-  z-index: 1;
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s ease;
 }
 
 .Navbar {
-  height: 100%;
-  width: 95%;
   display: flex;
-  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
   align-items: center;
-  padding-left: 5%;
-  padding-right: 5%;
+  justify-content: space-around;
+  column-gap: 150px;
   background-color: rgb(0, 0, 0);
 }
 
@@ -49,9 +43,13 @@
   color: white;
 }
 
-#logoempresa {
+.logoempresa {
   height: 80px;
   width: 80px;
+}
+
+.btnUser {
+  display: none;
 }
 
 .dropdown {
@@ -65,7 +63,7 @@
   width: 50%;
   position: absolute;
   right: 0;
-  top: 70px;
+  top: 100px;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
@@ -107,11 +105,7 @@
   background-color: #dd8f13;
 }
 
-.btnUser {
-  display: none;
-}
-
-@media screen and (width > 375px) {
+@media screen and (width >= 360px) {
   .menu {
     width: 60px;
     height: 60px;
@@ -121,36 +115,45 @@
     width: 30%;
   }
 }
-@media screen and (width > 768px) {
+
+@media screen and (width >= 1024px) {
   .menu {
     display: none;
   }
 
+  .Navbar {
+    width: 100%;
+    display: flex;
+    column-gap: 0;
+  }
+
+  .logoempresa {
+    width: 100px;
+  }
+
   .containerLinks {
+    width: 80%;
+    height: 95%;
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
-    width: 80%;
-    height: 50%;
     justify-content: center;
     align-items: center;
+    column-gap: 10px;
   }
 
   #link {
-    text-decoration: none;
-    color: white;
+    width: 25%;
     font-size: 30px;
+    text-align: center;
     font-family: "Michroma", sans-serif;
-  }
-
-  #link.active {
-    color: #dd8f13;
+    color: white;
+    text-decoration: none;
   }
 
   .btnUser {
-    display: flex;
-    width: 80px;
     height: 80px;
+    width: 10%;
+    display: flex;
     background-image: url("../Pictures/iconUser.png");
     background-position: center center;
     background-repeat: no-repeat;
@@ -166,7 +169,4 @@
   .dropdown-content2 {
     width: 30%;
   }
-}
-
-@media screen and (width > 1024px) {
 }

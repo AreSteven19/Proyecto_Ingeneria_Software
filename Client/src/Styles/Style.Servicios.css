@@ -14,15 +14,16 @@
 
 .container_Servicios {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  row-gap: 10px;
 }
 
 .container_tittleServicios {
   width: 100%;
-  height: 20%;
+  height: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,31 +32,55 @@
 
 .title_Servicios {
   font-family: "Michroma", sans-serif;
-  font-size: 50px;
-  font-weight: 900;
+  font-size: 25px;
+  font-weight: bolder;
 }
 
 .container_Cards {
   width: 95%;
-  height: 60%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.containerCards_1 {
+  width: 100%;
+  height: 50%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.containerCards_2 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
 }
 
 .card {
-  width: 20%;
-  height: 100%;
+  width: 50%;
+  height: 95%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 10px;
-  background-color: #f0f0f0;
-  transition: all 0.5s ease-out;
+  row-gap: 5px;
+  background-color: #000000;
+  color: #dd8f13;
+  user-select: none;
+  transition: all 0.3s ease;
 }
 
-.card:nth-child(1):hover {
+.containerCards_1 .card:nth-child(1):hover {
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6),
@@ -65,10 +90,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: white;
 }
 
-.card:nth-child(2):hover {
+.containerCards_1 .card:nth-child(2):hover {
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6),
@@ -78,10 +102,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: white;
 }
 
-.card:nth-child(3):hover {
+.containerCards_2 .card:nth-child(1):hover {
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6),
@@ -89,12 +112,11 @@
     ),
     url("../Pictures/spaHover.jpeg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
-  color: white;
 }
 
-.card:nth-child(4):hover {
+.containerCards_2 .card:nth-child(2):hover {
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6),
@@ -104,7 +126,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: white;
 }
 
 .logoCards {
@@ -114,14 +135,14 @@
   align-items: center;
 }
 
-.card:nth-child(1) .logoCards {
+.containerCards_1 .card:nth-child(1) .logoCards {
   background-image: url("../Pictures/scissors.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
 }
 
-.card:nth-child(2) .logoCards {
+.containerCards_1 .card:nth-child(2) .logoCards {
   background-image: url("../Pictures/maquinita.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -129,14 +150,14 @@
   transform: rotate(-45deg);
 }
 
-.card:nth-child(3) .logoCards {
+.containerCards_2 .card:nth-child(1) .logoCards {
   background-image: url("../Pictures/spá.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
 }
 
-.card:nth-child(4) .logoCards {
+.containerCards_2 .card:nth-child(2) .logoCards {
   background-image: url("../Pictures/ojos.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -151,7 +172,7 @@
   justify-content: center;
   align-items: center;
   font-family: "Michroma", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .card > #descriptionCard {
@@ -159,32 +180,112 @@
   height: 30%;
   text-align: center;
   font-family: "Michroma", sans-serif;
-  font-size: 20px;
-}
-
-.card:nth-child(3) #descriptionCard {
-  width: 70%;
-}
-
-.card:nth-child(4) #descriptionCard {
-  width: 70%;
+  font-size: 15px;
 }
 
 .container_Btn {
   width: 100%;
-  height: 20%;
+  height: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.Button_Bienvenido {
-  width: 350px;
-  height: 75px;
+.Button_Servicios {
+  min-width: 200px;
+  min-height: 60px;
   background-color: #dd8f13;
   color: white;
   font-family: "Michroma", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   border-radius: 10px;
   border-color: #808080;
+}
+
+@media screen and (width >= 768px) {
+  .title_Servicios {
+    font-size: 50px;
+  }
+
+  .logoCards {
+    height: 25%;
+  }
+
+  .card > #tittleCard {
+    font-size: 25px;
+  }
+
+  .card > #descriptionCard {
+    font-size: 20px;
+  }
+
+  .Button_Servicios {
+    height: 85px;
+  }
+}
+
+@media screen and (width = 1024px) and (height = 1366px) and (orientation: portrait) {
+  .container_Cards {
+    flex-direction: column;
+  }
+
+  .card > #tittleCard {
+    font-size: 35px;
+  }
+
+  .card > #descriptionCard {
+    font-size: 30px;
+  }
+
+  .Button_Servicios {
+    min-width: 350px;
+    height: 100px;
+    font-size: 40px;
+  }
+}
+
+@media screen and (width >= 1024px) and (orientation: landscape) {
+  .container_Servicios {
+    row-gap: 5px;
+  }
+
+  .container_tittleServicios {
+    height: 15%;
+  }
+
+  .container_Cards {
+    height: 65%;
+    width: 90%;
+    flex-direction: row;
+    box-sizing: border-box;
+    column-gap: 10px;
+    align-items: center;
+  }
+
+  .containerCards_1 {
+    height: 95%;
+  }
+
+  .containerCards_2 {
+    height: 95%;
+  }
+
+  .card {
+    height: 95%;
+  }
+
+  .container_Btn {
+    height: 15%;
+  }
+
+  .Button_Servicios {
+    min-width: 350px;
+    height: 80px;
+    font-size: 40px;
+    transition: all 0.5s ease;
+  }
+
+  .Button_Servicios:hover {
+    transform: scale(1.1);
+  }
 }
