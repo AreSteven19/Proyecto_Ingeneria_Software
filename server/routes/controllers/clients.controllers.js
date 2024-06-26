@@ -15,18 +15,23 @@ export const getClients = async (req, res) => {
 
 // Fetch a client by email and password, Function for login
 export const getClient = async (req, res) => {
-   
-   try {
-    const [resul] = await pool.query("select *from client where email= ? && password  = ?",[req.params.email,req.params.password]);
-
-    
-    res.json(resul);
-   } catch (error) {
-    return res.status(500).json({massage:error.message});
-   }
-    
-}
-
+    const { email, password } = req.body;
+  
+    try {
+      const [result] = await pool.query(
+        "SELECT * FROM client WHERE email = ? AND password = ?",
+        [email, password]
+      );
+  
+      if (result.length === 0) {
+        return res.status(404).json({ message: "Usuario o contraseña incorrectos" });
+      }
+  
+      res.json(result[0]);
+    } catch (error) {
+      return res.status(500).json({ message: error.message });
+    }
+  };
 
 // Fetch only users who are admins and barbers for the barbers' cards
 export const getBarber = async (req, res) => {

@@ -20,9 +20,9 @@ export const getClients = async () => {
     }
 };
 
-export const getClient = async () => {
+export const getClient = async (client) => {
     try {
-      const response = await axios.get('http://localhost:4000/clients/:email/:password', client);
+      return await axios.post('http://localhost:4000/clients/:email/:password', client);//se cambio a post
           } catch (error) {
       console.error('Error al hacer la solicitud desde api:', error.response ? error.response.data : error.message);
       throw error;
