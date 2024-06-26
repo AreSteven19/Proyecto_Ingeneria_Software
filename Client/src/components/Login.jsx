@@ -4,24 +4,27 @@ import { useNavigate } from "react-router-dom";
 
 export function LoginC() {
   const navigate = useNavigate();
-  const handleClick = () => {
+  const handleClick = (event) => {
+    event.preventDefault(); // Previene el envío del formulario
     navigate("/pagina_principal");
   };
 
   return (
     <div className="contenidoL">
       <div className="formulario">
-        <h1>inicio de sesión</h1>
+        <h1>Inicio de Sesión</h1>
 
-        <form action="">
+        <form>
           <div className="username">
             <input type="text" required />
             <label>Correo Electrónico</label>
+            <span></span>
           </div>
 
           <div className="username">
             <input type="password" required />
-            <label>Contraseña </label>
+            <label>Contraseña</label>
+            <span></span>
           </div>
 
           <input type="submit" onClick={handleClick} value="Iniciar Sesión" />
