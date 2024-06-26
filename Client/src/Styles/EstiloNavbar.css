@@ -116,6 +116,12 @@
   }
 }
 
+@media screen and (width >= 768px) {
+  .Navbar {
+    column-gap: 500px;
+  }
+}
+
 @media screen and (width >= 1024px) {
   .menu {
     display: none;
