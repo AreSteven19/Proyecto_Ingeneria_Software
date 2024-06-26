@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "../Styles/EstiloLogin.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
+import {getClient} from '../api/client.api';
+
 
 export function LoginC() {
   const navigate = useNavigate();
@@ -27,15 +29,19 @@ export function LoginC() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    alert("¡Registro enviado!");
-    navigate("/");
+    
+   
     try {
-      console.log(EstadoLogin);
-      
-      // const response = await createClient(EstadoLogin)
-      //console.log("Datos guardados",response.data)
+      // Verificar cliente
+      const response = await getClient(EstadoLogin);
+           if (response.status === 200) {
+        navigate("/pagina_principal");
+      } else {
+        alert(response.data.message || "Usuario o contraseña incorrectos");
+      }
     } catch (error) {
-      console.error("Error al guardar datos", error)
+      
+      alert("Ocurrió un error al intentar iniciar sesión. Por favor, inténtelo de nuevo más tarde.");
     }
   };
 

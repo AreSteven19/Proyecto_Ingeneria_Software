@@ -20,7 +20,7 @@ import {
 const router = Router();
 
 router.get('/clients', getClients);
-router.get('/clients/:email/:password', getClient);
+router.post('/clients/:email/:password', getClient);//se cambio a post
 router.get('/barbers/', getBarber);
 router.post('/clients', createClient);
 router.put('/clients/:id', updateClient);
