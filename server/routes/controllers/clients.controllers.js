@@ -1,7 +1,7 @@
 import { pool } from "../../db.js";
 
 
-
+//All clients
 export const getClients = async (req, res) => {
     try {
         const [resul] = await pool.query("select * from client");
@@ -13,6 +13,7 @@ export const getClients = async (req, res) => {
     }
 }
 
+// Fetch a client by email and password, Function for login
 export const getClient = async (req, res) => {
    
    try {
@@ -26,6 +27,22 @@ export const getClient = async (req, res) => {
     
 }
 
+
+// Fetch only users who are admins and barbers for the barbers' cards
+export const getBarber = async (req, res) => {
+   
+    try {
+     const [resul] = await pool.query("select *from client where fk_id_role in (3,2) ");
+ 
+     
+     res.json(resul);
+    } catch (error) {
+     return res.status(500).json({massage:error.message});
+    }
+     
+ }
+
+// Register a new client
 export const createClient = async (req, res) => {
 
     try {
@@ -44,6 +61,7 @@ export const createClient = async (req, res) => {
 
 }
 
+// Edit client data
 export const updateClient =  async (req, res) => {
     try {
         const resul = await pool.query("update client set ? where id = ?",
@@ -56,6 +74,8 @@ export const updateClient =  async (req, res) => {
     }
     
 }
+
+//Delete a client
 export const deleteClient = async (req, res) => {
     try  {  
         const [resul] = await pool.query("delete *from client where id= ?",
