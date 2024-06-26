@@ -125,7 +125,7 @@ export function RegisterC() {
 
           <div className="registro">
 
-            si quieres volver: <Link to="/">volver</Link>
+            si quieres  <Link to="/">volver</Link>
           </div>
 
         </form>
