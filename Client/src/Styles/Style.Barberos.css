@@ -12,16 +12,17 @@
   padding: 0;
 }
 
-.container_Servicios {
+.container_Barberos {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 85px);
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 10px;
+  background-color: #000000;
 }
 
-.container_tittleServicios {
+.container_tittleBarberos {
   width: 100%;
   height: 15%;
   display: flex;
@@ -30,13 +31,14 @@
   align-items: center;
 }
 
-.title_Servicios {
+.title_Barberos {
   font-family: "Michroma", sans-serif;
   font-size: 25px;
   font-weight: bolder;
+  color: aliceblue;
 }
 
-.container_Cards {
+.container_CardsB {
   width: 95%;
   height: 90%;
   display: flex;
@@ -46,7 +48,7 @@
   box-sizing: border-box;
 }
 
-.containerCards_1 {
+.containerCards_1B {
   width: 100%;
   height: 50%;
   display: flex;
@@ -56,7 +58,7 @@
   column-gap: 20px;
 }
 
-.containerCards_2 {
+.containerCards_2B {
   width: 100%;
   height: 50%;
   display: flex;
@@ -66,7 +68,7 @@
   column-gap: 20px;
 }
 
-.card {
+.cardB {
   width: 50%;
   height: 95%;
   display: flex;
@@ -74,13 +76,13 @@
   justify-content: center;
   align-items: center;
   row-gap: 5px;
-  background-color: #000000;
-  color: #dd8f13;
+  background-color: #dd8f13;
+  color: white;
   user-select: none;
   transition: all 0.3s ease;
 }
 
-.containerCards_1 .card:nth-child(1):hover {
+.containerCards_1B .cardB:nth-child(1):hover {
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6),
@@ -92,57 +94,50 @@
   background-size: cover;
 }
 
-.containerCards_1 .card:nth-child(2):hover {
+.containerCards_1B .cardB:nth-child(2):hover {
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
-    url("../Pictures/barbaHover.jpg");
+    url("../Pictures/barber1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.containerCards_2 .card:nth-child(1):hover {
+.containerCards_2B .cardB:nth-child(1):hover {
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
-    url("../Pictures/spaHover.jpeg");
+    url("../Pictures/barber2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.containerCards_2 .card:nth-child(2):hover {
+.containerCards_2B .cardB:nth-child(2):hover {
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
-    url("../Pictures/cejasHover.webp");
+    url("../Pictures/barber3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.logoCards {
-  width: 100%;
-  height: 20%;
-  justify-content: center;
-  align-items: center;
-}
-
-.containerCards_1 .card:nth-child(1) .logoCards {
+.containerCards_1B .cardB:nth-child(1) .logoCards {
   background-image: url("../Pictures/scissors.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
 }
 
-.containerCards_1 .card:nth-child(2) .logoCards {
+.containerCards_1B .cardB:nth-child(2) .logoCards {
   background-image: url("../Pictures/maquinita.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -157,14 +152,14 @@
   background-position: center center;
 }
 
-.containerCards_2 .card:nth-child(2) .logoCards {
+.containerCards_2B .cardB:nth-child(2) .logoCards {
   background-image: url("../Pictures/ojos.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
 }
 
-.card > #tittleCard {
+.cardB > #tittleCardB {
   width: 80%;
   height: 30%;
   display: flex;
@@ -175,15 +170,7 @@
   font-size: 20px;
 }
 
-.card > #descriptionCard {
-  width: 80%;
-  height: 30%;
-  text-align: center;
-  font-family: "Michroma", sans-serif;
-  font-size: 15px;
-}
-
-.container_Btn {
+.container_BtnBarberos {
   width: 100%;
   height: 15%;
   display: flex;
@@ -191,7 +178,7 @@
   align-items: center;
 }
 
-.Button_Servicios {
+.Button_Barberos {
   min-width: 200px;
   min-height: 60px;
   background-color: #dd8f13;
@@ -203,41 +190,29 @@
 }
 
 @media screen and (width >= 768px) {
-  .title_Servicios {
+  .title_Barberos {
     font-size: 50px;
   }
 
-  .logoCards {
-    height: 25%;
-  }
-
-  .card > #tittleCard {
+  .cardB > #tittleCardB {
     font-size: 25px;
   }
 
-  .card > #descriptionCard {
-    font-size: 20px;
-  }
-
-  .Button_Servicios {
+  .Button_Barberos {
     height: 85px;
   }
 }
 
 @media screen and (width = 1024px) and (height = 1366px) and (orientation: portrait) {
-  .container_Cards {
+  .container_CardsB {
     flex-direction: column;
   }
 
-  .card > #tittleCard {
+  .cardB > #tittleCardB {
     font-size: 35px;
   }
 
-  .card > #descriptionCard {
-    font-size: 30px;
-  }
-
-  .Button_Servicios {
+  .Button_Barberos {
     min-width: 350px;
     height: 100px;
     font-size: 40px;
@@ -245,15 +220,15 @@
 }
 
 @media screen and (width >= 1024px) and (orientation: landscape) {
-  .container_Servicios {
+  .container_Barberos {
     row-gap: 5px;
   }
 
-  .container_tittleServicios {
+  .container_tittleBarberos {
     height: 15%;
   }
 
-  .container_Cards {
+  .container_CardsB {
     height: 65%;
     width: 90%;
     flex-direction: row;
@@ -262,32 +237,36 @@
     align-items: center;
   }
 
-  .containerCards_1 {
+  .containerCards_1B {
     height: 95%;
     column-gap: 10px;
   }
 
-  .containerCards_2 {
+  .containerCards_2B {
     height: 95%;
     column-gap: 10px;
   }
 
-  .card {
+  .cardB {
     height: 95%;
   }
 
-  .container_Btn {
+  .cardB > #tittleCardB {
+    text-align: center;
+  }
+
+  .container_BtnBarberos {
     height: 15%;
   }
 
-  .Button_Servicios {
+  .Button_Barberos {
     min-width: 350px;
     height: 80px;
     font-size: 40px;
     transition: all 0.5s ease;
   }
 
-  .Button_Servicios:hover {
+  .Button_Barberos:hover {
     transform: scale(1.1);
   }
 }

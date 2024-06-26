@@ -27,6 +27,9 @@ export function Navbar2({ activeSection }) {
           Servicios
         </Link>
         <Link id="link" to="/">
+          Barberos
+        </Link>
+        <Link id="link" to="/">
           Contacto
         </Link>
       </div>
