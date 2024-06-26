@@ -225,6 +225,10 @@
 }
 
 @media screen and (width = 1024px) and (height = 1366px) and (orientation: portrait) {
+  .container_Servicios {
+    height: calc(100vh - 95px);
+  }
+
   .container_Cards {
     flex-direction: column;
   }
@@ -246,7 +250,7 @@
 
 @media screen and (width >= 1024px) and (orientation: landscape) {
   .container_Servicios {
-    row-gap: 5px;
+    height: calc(100vh - 100px);
   }
 
   .container_tittleServicios {
