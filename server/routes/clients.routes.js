@@ -3,18 +3,34 @@ import { Router } from 'express';
 import {
     getClients,
     getClient,
+    getBarber,
     createClient,
     updateClient,
     deleteClient
 } from '../routes/controllers/clients.controllers.js'
+import {
+    getServices,
+    getService,
+    createService,
+    updateService,
+    deleteService
+} from '../routes/controllers/services.controllers.js'
+
 
 const router = Router();
 
 router.get('/clients', getClients);
-router.get('/clients/:id', getClient);
+router.get('/clients/:email/:password', getClient);
+router.get('/barbers/', getBarber);
 router.post('/clients', createClient);
 router.put('/clients/:id', updateClient);
 router.delete('/clients/:id', deleteClient);
+
+router.get('/services', getServices);
+router.get('/services/:id', getService);
+router.post('/services', createService);
+router.put('/services/:id', updateService);
+router.delete('/services/:id', deleteService);
 
 export	default router
 
