@@ -33,14 +33,14 @@
 
 .title_Barberos {
   font-family: "Michroma", sans-serif;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bolder;
   color: aliceblue;
 }
 
 .container_CardsB {
   width: 95%;
-  height: 90%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -55,7 +55,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: 20px;
+  column-gap: 15px;
 }
 
 .containerCards_2B {
@@ -65,7 +65,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: 20px;
+  column-gap: 15px;
 }
 
 .cardB {
@@ -161,7 +161,7 @@
 
 .cardB > #tittleCardB {
   width: 80%;
-  height: 30%;
+  height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -170,23 +170,29 @@
   font-size: 20px;
 }
 
-.container_BtnBarberos {
+.cardB > #tittleCardB > p {
+  text-align: center;
+}
+
+.ContainerbtnVer_Card {
   width: 100%;
-  height: 15%;
+  height: 40%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.Button_Barberos {
-  min-width: 200px;
-  min-height: 60px;
-  background-color: #dd8f13;
-  color: white;
+.btnVer {
+  width: 50%;
+  height: 50%;
+  border: #dd8f13 2px unset;
+  border-radius: 5px;
+  outline: none;
+  background-color: burlywood;
   font-family: "Michroma", sans-serif;
-  font-size: 25px;
-  border-radius: 10px;
-  border-color: #808080;
+  font-size: 20px;
+  color: white;
 }
 
 @media screen and (width >= 768px) {
@@ -197,10 +203,6 @@
   .cardB > #tittleCardB {
     font-size: 25px;
   }
-
-  .Button_Barberos {
-    height: 85px;
-  }
 }
 
 @media screen and (width = 1024px) and (height = 1366px) and (orientation: portrait) {
@@ -210,12 +212,6 @@
 
   .cardB > #tittleCardB {
     font-size: 35px;
-  }
-
-  .Button_Barberos {
-    min-width: 350px;
-    height: 100px;
-    font-size: 40px;
   }
 }
 
@@ -253,20 +249,5 @@
 
   .cardB > #tittleCardB {
     text-align: center;
-  }
-
-  .container_BtnBarberos {
-    height: 15%;
-  }
-
-  .Button_Barberos {
-    min-width: 350px;
-    height: 80px;
-    font-size: 40px;
-    transition: all 0.5s ease;
-  }
-
-  .Button_Barberos:hover {
-    transform: scale(1.1);
   }
 }

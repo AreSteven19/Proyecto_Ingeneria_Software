@@ -12,11 +12,17 @@ export default function Barberos() {
             <div id="tittleCardB">
               <p>Andy Castrillo</p>
             </div>
+            <div className="ContainerbtnVer_Card">
+              <input type="button" value="Ver" className="btnVer" />
+            </div>
           </div>
 
           <div className="cardB">
             <div id="tittleCardB">
               <p>Yosh Lobo</p>
+            </div>
+            <div className="ContainerbtnVer_Card">
+              <input type="button" value="Ver" className="btnVer" />
             </div>
           </div>
         </div>
@@ -26,18 +32,21 @@ export default function Barberos() {
             <div id="tittleCardB">
               <p>Guillermo Hernandez</p>
             </div>
+            <div className="ContainerbtnVer_Card">
+              <input type="button" value="Ver" className="btnVer" />
+            </div>
           </div>
 
           <div className="cardB">
             <div id="tittleCardB">
               <p>Geohandry Zúñiga</p>
             </div>
+            <div className="ContainerbtnVer_Card">
+              <input type="button" value="Ver" className="btnVer" />
+            </div>
           </div>
         </div>
       </section>
-      <div className="container_BtnBarberos">
-        <button className="Button_Barberos">Reservar</button>
-      </div>
     </div>
   );
 }
