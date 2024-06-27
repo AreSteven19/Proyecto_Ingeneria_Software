@@ -9,9 +9,11 @@
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "git": "^0.1.5",
+    "mapbox-gl": "^3.4.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
+    "react-map-gl": "^7.1.7",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

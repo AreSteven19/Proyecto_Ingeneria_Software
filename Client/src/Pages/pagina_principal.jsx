@@ -62,7 +62,7 @@ export function PaginaP() {
         <Bienvenido />
         <Servicios />
         <Barberos />
-        {/* <Contacto /> */}
+        <Contacto />
       </div>
     </div>
   );

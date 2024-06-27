@@ -53,7 +53,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: 20px;
+  column-gap: 15px;
 }
 
 .containerCards_2 {
@@ -63,7 +63,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: 20px;
+  column-gap: 15px;
 }
 
 .card {

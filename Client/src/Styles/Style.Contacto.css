@@ -5,8 +5,34 @@
 }
 
 .Container_Contacto {
-  width: 90%;
+  width: 100%;
   height: calc(100vh - 85px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.container_tittle {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.container_tittle p {
+  font-family: "Michroma", sans-serif;
+  font-size: 30px;
+  color: white;
+}
+
+.containerGen_Form {
+  width: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,23 +40,28 @@
 }
 
 .container_Mapa {
-  width: 90%;
-  height: 20%;
+  width: 100%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
+  background-color: black;
 }
 
 .container_Form {
   width: 100%;
-  height: 70%;
+  height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../Pictures/bg_Contacto.webp");
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../Pictures/bg_Contacto.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -85,5 +116,67 @@
   border-radius: 5px;
   font-family: "Michroma", sans-serif;
   font-size: 20px;
-  background-color: #d5a353;
+  background-color: #dd8f13;
+}
+
+@media screen and (width >= 768px) {
+  .container_tittle p {
+    font-size: 50px;
+  }
+
+  .formContact {
+    width: 75%;
+  }
+}
+
+@media screen and (width >= 1024px) and (height = 1366px) and (orientation: portrait) {
+  .container_Mapa {
+    display: flex;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .containerGen_Form {
+    width: 100%;
+    height: 80%;
+    flex-direction: row;
+  }
+
+  .container_Mapa {
+    display: flex;
+    width: 50%;
+    height: 100%;
+  }
+
+  .container_Form {
+    width: 50%;
+    height: 100%;
+  }
+
+  .formContact {
+    width: 98%;
+    row-gap: 20px;
+  }
+
+  .formContact #name,
+  #telefono,
+  #correo {
+    width: 95%;
+    height: 110px;
+    font-size: 30px;
+  }
+
+  .formContact #message {
+    height: 250px;
+    width: 95%;
+    font-size: 30px;
+  }
+
+  .formContact #botonEnviarForm {
+    height: 100px;
+    width: 80%;
+    font-size: 30px;
+  }
 }
