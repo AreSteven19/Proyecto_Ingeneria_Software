@@ -1,3 +1,4 @@
+
 .contenidoL {
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
@@ -5,6 +6,21 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+    min-width: 295px;
+    position: relative;
+   
+}
+
+.contenidoL::after {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* que tan ocuro el fondo */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
 }
 
 .contenidoR {
@@ -13,7 +29,20 @@
     background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../Pictures/fondo_registrar.png"); 
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.contenidoR::after {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* que tan ocuro el fondo */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
 }
 
 .formulario {
@@ -25,6 +54,8 @@
     width: 500px;
     margin-top: 10px;
     background-color: white;
+    min-width: 295px;
+    z-index: 2;
 }
 
 .formulario h1 {
@@ -110,4 +141,57 @@ input[type="submit"]:hover {
     text-align: center;
     font-size: 16px;
     color: black;
+}
+
+
+@media(width < 700px){
+ 
+
+    .formulario{
+        width: 400px;
+    }
+}
+
+@media(width < 460px){
+ 
+
+    .formulario{
+        width: 290px;
+    }
+
+    .formulario h1 {
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+        border-bottom: 1px solid silver;
+        font-size: 28px;
+    }
+}
+
+@media(width < 350px ){
+ 
+
+    .formulario{
+        width: 280px;
+    }
+
+    .formulario h1 {
+        text-align: center;
+        padding: 10px 0px 10px 0px;
+        border-bottom: 1px solid silver;
+    }
+
+    @media(width < 300px ){
+ 
+
+        .formulario{
+            width: 260px;
+        }
+    
+        .formulario h1 {
+            text-align: center;
+            padding: 10px 0px 10px 0px;
+            border-bottom: 1px solid silver;
+        }
+
+    }
 }
