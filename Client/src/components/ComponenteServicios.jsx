@@ -1,6 +1,8 @@
-import "../Styles/Style.Servicios.css";
+import "../Styles/Style.ComponenteServicios.css";
+import { useNavigate } from "react-router-dom";
 
-export default function Servicios() {
+export default function ComponenteServicios() {
+  const navigate = useNavigate();
   return (
     <div id="servicios" className="container_Servicios">
       <section className="container_tittleServicios">
@@ -52,7 +54,12 @@ export default function Servicios() {
         </div>
       </section>
       <div className="container_Btn">
-        <button className="Button_Servicios">Reservar</button>
+        <button
+          className="Button_Servicios"
+          onClick={() => navigate("/Pagina_reservacion")}
+        >
+          Reservar
+        </button>
       </div>
     </div>
   );

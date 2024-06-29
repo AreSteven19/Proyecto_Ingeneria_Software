@@ -1,9 +1,9 @@
 import React from "react";
 
-import "../Styles/Style.Contacto.css";
-import MapComponent from "./MapComponent";
+import "../Styles/Style.ComponenteContacto.css";
+import SubComponenteMap from "./Subcomponente/SubComponenteMap";
 
-export default function Contacto() {
+export default function ComponenteContacto() {
   return (
     <section className="Container_Contacto">
       <div className="container_tittle">
@@ -11,7 +11,7 @@ export default function Contacto() {
       </div>
       <div className="containerGen_Form">
         <div className="container_Mapa">
-          <MapComponent />
+          <SubComponenteMap />
         </div>
         <div className="container_Form">
           <form className="formContact" onSubmit={(e) => e.preventDefault()}>

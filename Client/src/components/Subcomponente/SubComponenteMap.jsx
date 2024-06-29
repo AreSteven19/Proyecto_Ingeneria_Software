@@ -5,7 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 mapboxgl.accessToken =
   "pk.eyJ1Ijoicm9sYW5kby1tdXJpbGxvYWd1aXJyZSIsImEiOiJjbHh4YTR6cDQyYWVjMm1wdHZraG5paGVrIn0.Y3vxm9aIAjJ5PEXz6tkacg";
 
-export default function MapComponent() {
+export default function SubComponenteMap() {
   const mapContainerRef = useRef(null);
   const mapRef = useRef(null);
   const markerCoordinates = [-82.942369, 8.747008];

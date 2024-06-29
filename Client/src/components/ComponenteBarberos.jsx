@@ -1,6 +1,6 @@
-import "../Styles/Style.Barberos.css";
+import "../Styles/Style.ComponenteBarberos.css";
 
-export default function Barberos() {
+export default function ComponenteBarberos() {
   return (
     <div id="servicios" className="container_Barberos">
       <section className="container_tittleBarberos">
