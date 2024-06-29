@@ -1,12 +1,12 @@
 import React from "react";
 
 import "../Styles/EstiloLogin.css";
-import Jumbotron from "../components/Jumbotron";
-import Bienvenido from "../components/Bienvenido";
 import Navbar2 from "../components/Navbar2";
-import Servicios from "../components/Servicios";
-import Barberos from "../components/Barberos";
-import Contacto from "../components/Contacto";
+import ComponenteJumbotron from "../components/ComponenteJumbotron";
+import ComponenteBienvenido from "../components/ComponenteBienvenido";
+import ComponenteServicios from "../components/ComponenteServicios";
+import ComponenteBarberos from "../components/ComponenteBarberos";
+import ComponenteContacto from "../components/ComponenteContacto";
 
 export function PaginaP() {
   // const [activeSection, setActiveSection] = useState("");
@@ -58,11 +58,11 @@ export function PaginaP() {
           width: "100%",
         }}
       >
-        <Jumbotron />
-        <Bienvenido />
-        <Servicios />
-        <Barberos />
-        <Contacto />
+        <ComponenteJumbotron />
+        <ComponenteBienvenido />
+        <ComponenteServicios />
+        <ComponenteBarberos />
+        <ComponenteContacto />
       </div>
     </div>
   );

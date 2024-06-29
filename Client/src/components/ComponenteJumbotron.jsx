@@ -1,6 +1,6 @@
-import "../Styles/Style.Jumbotron.css";
+import "../Styles/Style.ComponenteJumbotron.css";
 
-export default function Jumbotron() {
+export default function ComponenteJumbotron() {
   return (
     <section id="jumbotron" className="Container_Jumbotron">
       <div className="textJumbotron">

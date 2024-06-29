@@ -1,0 +1,42 @@
+.container_Progreso {
+  display: flex;
+  flex-direction: row;
+  column-gap: 75px;
+  height: 80%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.opcionProgreso {
+  width: 15%;
+  height: 95%;
+  text-align: center;
+  font-family: "Michroma", sans-serif;
+  font-size: 25px;
+  background-color: #4a4a4a;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.opcionProgreso.active {
+  background-color: #007bff;
+}
+
+.opcionProgreso::after {
+  content: "";
+  position: absolute;
+  right: -74px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45%;
+  height: 5px;
+  background-color: #4a4a4a;
+  z-index: -1;
+}
+
+.opcionProgreso:last-child::after {
+  display: none;
+}

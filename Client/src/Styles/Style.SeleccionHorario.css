@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerSeleccionHorario {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
+
+.containerTittleHorario {
+  display: flex;
+  width: 95%;
+  height: 10%;
+  align-items: center;
+  user-select: none;
+  background-color: cadetblue;
+}
+
+.btnVolverH {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.tittleHorario {
+  font-family: "Michroma", sans-serif;
+  font-size: 24px;
+}
+
+.ContainerHorarios {
+  width: 95%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: rgb(105, 95, 160);
+}

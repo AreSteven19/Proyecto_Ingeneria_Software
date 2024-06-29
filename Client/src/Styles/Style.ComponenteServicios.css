@@ -285,8 +285,8 @@
   }
 
   .Button_Servicios {
-    min-width: 350px;
-    height: 80px;
+    min-width: 320px;
+    height: 70px;
     font-size: 40px;
     transition: all 0.5s ease;
   }

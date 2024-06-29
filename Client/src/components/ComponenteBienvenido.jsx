@@ -1,7 +1,7 @@
-import "../Styles/Style.Bienvenido.css";
+import "../Styles/Style.ComponenteBienvenido.css";
 import bgBienvenido from "../Pictures/bg_Bienvenido.jpg";
 
-export default function Bienvenido() {
+export default function ComponenteBienvenido() {
   return (
     <section id="bienvenido" className="Container_Bienvenido">
       <dic className="containerBg">
