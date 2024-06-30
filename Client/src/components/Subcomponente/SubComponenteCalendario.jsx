@@ -21,10 +21,13 @@ const availableTimes = [
 
 const SubComponenteCalendario = ({ onDateChange }) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedTime, setSelectedTime] = useState("");
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
-    onDateChange(date);
+    if (selectedTime) {
+      enviarFechaYHora(date, selectedTime);
+    }
   };
 
   const formatDate = (date) => {
@@ -32,8 +35,17 @@ const SubComponenteCalendario = ({ onDateChange }) => {
       weekday: "long",
       day: "numeric",
       month: "long",
-      year: "numeric",
     });
+  };
+
+  const enviarFechaYHora = (date, time) => {
+    const fechaConFormato = formatDate(date);
+    onDateChange({ date: fechaConFormato, time });
+  };
+
+  const handleTimeClick = (time) => {
+    setSelectedTime(time);
+    enviarFechaYHora(selectedDate, time);
   };
 
   return (
@@ -49,7 +61,11 @@ const SubComponenteCalendario = ({ onDateChange }) => {
 
       <div className="horasServicio">
         {availableTimes.map((time, index) => (
-          <div key={index} className="hora">
+          <div
+            key={index}
+            className={`hora ${selectedTime === time ? "selected" : ""}`}
+            onClick={() => handleTimeClick(time)}
+          >
             {time}
           </div>
         ))}

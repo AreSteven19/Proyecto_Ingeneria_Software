@@ -133,7 +133,8 @@ export default function Pagina_reservar() {
                 {selectedHorario && (
                   <p className="horarioReservado">
                     <img className="iconCal" src={iconCalendario}></img>{" "}
-                    {selectedHorario.toDateString()}
+                    <span className="txtHorarioD">{selectedHorario.date}</span>
+                    <span className="txtHorarioT">{selectedHorario.time}</span>
                   </p>
                 )}
                 {/* Visualización de los Servicios */}
