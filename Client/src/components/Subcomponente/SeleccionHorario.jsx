@@ -1,9 +1,14 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import "../../Styles/Style.SeleccionHorario.css";
+import SubCompCalendario from "./SubComponenteCalendario";
 
-const SeleccionHorario = ({ onSelectBarbero }) => {
-  const navigate = useNavigate();
+const SeleccionHorario = ({ onSelectHorario, goBack, props }) => {
+  const [selectedDate, setSelectedDate] = useState(null);
+  const handleChangeDate = (date) => {
+    setSelectedDate(date);
+    onSelectHorario(date);
+  };
+
   const flecha = (
     <svg
       className="w-6 h-6 text-gray-800 dark:text-white"
@@ -26,16 +31,16 @@ const SeleccionHorario = ({ onSelectBarbero }) => {
   return (
     <div className="containerSeleccionHorario">
       <div className="containerTittleHorario">
-        <button
-          className="btnVolverH"
-          onClick={() => navigate("/Pagina_Principal")}
-        >
+        <button className="btnVolverH" onClick={goBack}>
           {flecha}
         </button>
-        <h1 className="tittleHorario">Seleccionar Horario</h1>
+        <h1 className="tittleHorario">Seleccionar Fecha y Hora</h1>
+      </div>
+      <div className="barberoSeleccionado">
+        {props ? props.name : "Aún no ha seleccionado barbero"}
       </div>
       <div className="ContainerHorarios">
-        <h1>Hola desde SeleccionHorario</h1>
+        <SubCompCalendario onDateChange={handleChangeDate} />
       </div>
     </div>
   );

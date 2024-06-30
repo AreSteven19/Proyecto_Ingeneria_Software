@@ -1,15 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Styles/Style.SeleccionBarbero.css";
+import img1 from "../../Pictures/barber3.jpg";
 
 const barberos = [
-  { name: "Jorsh", image: "../Pictures/barber1.jpg" },
-  { name: "Guillermo", image: "../Pictures/barber1.jpg" },
-  { name: "Geohandry", image: "../Pictures/barber1.jpg" },
-  { name: "Andy", image: "../Pictures/barber1.jpg" },
+  { name: "Jorsh", image: img1 },
+  { name: "Guillermo", image: img1 },
+  { name: "Geohandry", image: img1 },
+  { name: "Andy", image: img1 },
 ];
 
-const SeleccionBarbero = ({ onSelectBarbero }) => {
+const SeleccionBarbero = ({ onSelectBarbero, goBack }) => {
   const navigate = useNavigate();
   const flecha = (
     <svg
@@ -33,10 +34,7 @@ const SeleccionBarbero = ({ onSelectBarbero }) => {
   return (
     <div className="containerSeleccionBarbero">
       <div className="containerTittleBarber">
-        <button
-          className="btnVolverB"
-          onClick={() => navigate("/Pagina_Principal")}
-        >
+        <button className="btnVolverB" onClick={goBack}>
           {flecha}
         </button>
         <h1 className="tittleBarber">Seleccionar Barbero</h1>
@@ -48,7 +46,7 @@ const SeleccionBarbero = ({ onSelectBarbero }) => {
             className="barbero"
             onClick={() => onSelectBarbero(barbero)}
           >
-            <div className="containerImgBarbero" key={barbero.index}>
+            <div className="containerImgBarbero">
               <img
                 className="imgBarbero"
                 src={barbero.image}
