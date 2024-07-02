@@ -23,7 +23,7 @@ export default function Pagina_reservar() {
   });
 
   const handleConfirm = () => {
-    const dataToSend = {
+    const setBarberData = {
       services: barberData.services,
       fecha: barberData.fecha,
       hora: barberData.hora,
