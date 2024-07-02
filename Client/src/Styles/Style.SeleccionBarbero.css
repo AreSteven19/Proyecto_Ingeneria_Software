@@ -35,18 +35,18 @@
 
 .tittleBarber {
   font-family: "Michroma", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .ContainerBarberos {
   width: 95%;
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 20px;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 10px;
+  column-gap: 70px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .barbero {
@@ -58,7 +58,6 @@
   align-items: center;
   background-color: #d9d9d9;
   border-radius: 10px;
-  margin-top: 20px;
 }
 
 .containerImgBarbero {
@@ -84,6 +83,34 @@
   justify-content: center;
   align-items: center;
   font-family: "Michroma", sans-serif;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: 500;
+}
+
+@media screen and (width >= 768px) {
+  .tittleBarber {
+    font-size: 25px;
+  }
+
+  .containerNameBarbero {
+    font-size: 20px;
+  }
+}
+
+@media screen and (width >= 1024px) and (height = 1366px) and (orientation: portrait) {
+  .tittleBarber {
+    font-size: 30px;
+  }
+
+  .barbero {
+    width: 40%;
+    height: 30%;
+  }
+}
+
+@media screen and (width >= 1024px) and (orientation: landscape) {
+  .barbero {
+    width: 40%;
+    height: 30%;
+  }
 }

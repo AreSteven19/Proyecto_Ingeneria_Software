@@ -36,8 +36,10 @@ const SeleccionHorario = ({ onSelectHorario, goBack, props }) => {
         </button>
         <h1 className="tittleHorario">Seleccionar Fecha y Hora</h1>
       </div>
-      <div className="barberoSeleccionado">
-        {props ? props.name : "Aún no ha seleccionado barbero"}
+      <div className="containerBarberSeleccionado">
+        <span className="barberoSeleccionado">
+          {props ? props.name : "Aún no ha seleccionado barbero"}
+        </span>
       </div>
       <div className="ContainerHorarios">
         <SubCompCalendario onDateChange={handleChangeDate} />

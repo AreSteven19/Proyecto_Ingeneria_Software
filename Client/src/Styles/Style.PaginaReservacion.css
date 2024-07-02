@@ -10,73 +10,67 @@
   height: 100vh;
 }
 
-.resumenFinaltxt {
-  font-size: 20px;
-  font-weight: bolder;
-}
-
-.containerTittleStepFinal {
-  width: 100%;
-  height: 10%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 20px;
-}
-
 .container_BarProgres {
   display: flex;
   width: 100%;
-  height: 10%;
+  min-height: 80px;
   align-items: center;
   justify-content: center;
 }
 
-.containerBodyPage {
+.containerSubcompoente {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  height: calc(100vh - 61px);
+  height: calc(100vh - 80px);
 }
 
 .contentPageReservar {
   display: flex;
-  width: 65%;
-  height: calc(100vh - 61px);
+  width: 100%;
+  height: 50%;
   justify-content: center;
+}
+
+.ResumenSelecciones {
+  width: 100%;
+  height: auto;
+  min-height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 .ResumenSelecciones.fullWidth {
   width: 100%;
-}
-
-.ResumenSelecciones {
-  width: 35%;
-  height: calc(100vh - 61px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 100%;
+  justify-content: space-between;
   align-items: center;
-}
-
-.bodyResumen.fullWidthBody {
-  width: 30%;
 }
 
 .bodyResumen {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  height: 70%;
+  width: 95%;
+  height: 85%;
   align-items: center;
   justify-content: flex-start;
   border-radius: 5px;
   border: solid 1px black;
 }
 
+.bodyResumen.fullWidthBody {
+  width: 95%;
+  min-height: 350px;
+  height: auto;
+}
+
 .headerResumen {
   width: 100%;
-  height: 20%;
+  min-height: 20%;
   display: flex;
   flex-direction: row;
   column-gap: 10px;
@@ -87,7 +81,12 @@
   background-color: #d9d9d9;
 }
 
-#imgLogo {
+.imgLogo {
+  width: 50px;
+  height: 50px;
+}
+
+.imgLogo.fullWidthLogo {
   width: 70px;
   height: 70px;
 }
@@ -95,20 +94,19 @@
 .containertxtHeader {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 90%;
   align-items: center;
   font-size: 20px;
 }
 
 .containerResumenGeneral {
   height: 75%;
-  width: 90%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 10px;
-  row-gap: 10px;
+  padding-top: 5px;
 }
 
 .servicioAgregado {
@@ -116,18 +114,19 @@
   flex-direction: column;
   align-items: flex-start;
   width: 95%;
-  min-height: 70%;
+  height: auto;
   margin-bottom: 10px;
   overflow-y: auto;
-  row-gap: 10px;
+  row-gap: 5px;
   border-bottom: 2px solid black;
+  box-sizing: border-box;
 }
 
 .horarioReservado {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 20px;
+  font-size: 15px;
   width: 100%;
 }
 
@@ -138,7 +137,9 @@
 }
 
 .txtHorarioT {
-  width: 25%;
+  width: 30%;
+  text-align: end;
+  padding-right: 5px;
 }
 
 .txtHorarioD {
@@ -154,6 +155,7 @@
   width: 100%;
   row-gap: 15px;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .servicioYprecio {
@@ -162,6 +164,8 @@
   align-items: center;
   font-size: 20px;
   width: 100%;
+  padding-right: 5px;
+  box-sizing: border-box;
 }
 
 .nombreServicio {
@@ -178,27 +182,84 @@
 
 .barberoRes {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 15px;
+  width: 100%;
+}
+
+.txtBarberoName {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  flex: 1;
+}
+
+.txtBarbero {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+
+.iconBar {
+  width: 10%;
+  height: 30px;
+  padding: 3px;
+}
+
+.notasreservaTxt {
+  width: 100%;
+  text-align: start;
   font-size: 20px;
-  flex: 1;
+}
+
+.Contnotasreserva {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.messageReser {
   width: 80%;
+  outline: none;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .containerTotal {
-  width: 90%;
-  height: 50px;
+  width: 95%;
+  max-height: 50px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.totalContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
 .containerTotal p {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .btnContinuarRes {
-  width: 50%;
+  width: 80%;
   height: 15%;
   display: flex;
   justify-content: center;
@@ -206,7 +267,7 @@
 }
 
 .btnContinuarRes button {
-  width: 170px;
+  width: 160px;
   height: 40px;
   font-family: "Michroma", sans-serif;
   font-size: 20px;
@@ -218,4 +279,327 @@
 
 .btnContinuarRes button:hover {
   transform: scale(1.1);
+}
+
+.resumenFinaltxt {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.containerTittleStepFinal {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+}
+
+@media screen and (width >= 768px) {
+  #imgLogo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .containertxtHeader {
+    font-size: 30px;
+  }
+
+  .horarioReservado {
+    font-size: 25px;
+  }
+
+  .iconCal {
+    width: 10%;
+    height: 40px;
+    padding: 3px;
+  }
+
+  .servicioYprecio {
+    font-size: 30px;
+  }
+
+  .barberoRes {
+    font-size: 25px;
+  }
+
+  .bodyResumen.fullWidthBody {
+    min-height: 600px;
+  }
+
+  .containerTotal p {
+    font-size: 25px;
+  }
+
+  .btnContinuarRes button {
+    width: 50%;
+    height: 60px;
+    font-size: 35px;
+  }
+}
+
+@media screen and (width >= 1024px) and (height = 1366px) and (orientation: portrait) {
+  .containerSubcompoente {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .contentPageReservar {
+    width: 50%;
+    height: 100%;
+  }
+
+  .ResumenSelecciones {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bodyResumen {
+    height: 50%;
+  }
+
+  .btnContinuarRes {
+    height: 10%;
+  }
+
+  .btnContinuarRes button {
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+  }
+}
+
+@media screen and (width >= 1024px) and (orientation: landscape) {
+  .ContainerPage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .containerBodyGeneral {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100vh - 80px);
+  }
+  .resumenFinaltxt {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .containerTittleStepFinal {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  .container_BarProgres {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .containerSubcompoente {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100vh - 80px);
+  }
+
+  .contentPageReservar {
+    display: flex;
+    width: 50%;
+    height: calc(100vh - 80px);
+    justify-content: center;
+  }
+
+  .ResumenSelecciones.fullWidth {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .bodyResumen.fullWidthBody {
+    min-height: 400px;
+  }
+
+  .ResumenSelecciones {
+    width: 50%;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bodyResumen.fullWidthBody {
+    width: 50%;
+  }
+
+  .bodyResumen {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 70%;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 5px;
+    border: solid 1px black;
+  }
+
+  .headerResumen {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+  }
+
+  #imgLogo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .containertxtHeader {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .containerResumenGeneral {
+    height: 75%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+    row-gap: 10px;
+  }
+
+  .servicioAgregado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    min-height: 70%;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    row-gap: 10px;
+    border-bottom: 2px solid black;
+  }
+
+  .horarioReservado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .iconCal {
+    width: 10%;
+    height: 30px;
+    padding: 3px;
+  }
+
+  .txtHorarioT {
+    width: 25%;
+  }
+
+  .txtHorarioD {
+    flex: 1;
+    width: 60%;
+  }
+
+  .containerServiciosRes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    row-gap: 15px;
+    overflow-y: auto;
+  }
+
+  .servicioYprecio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .nombreServicio {
+    flex: 1;
+    width: 50%;
+    text-align: left;
+  }
+
+  .precioServicio {
+    flex: 1;
+    width: 50%;
+    text-align: right;
+  }
+
+  .barberoRes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    flex: 1;
+    width: 80%;
+  }
+
+  .containerTotal {
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .containerTotal p {
+    font-size: 20px;
+  }
+
+  .btnContinuarRes {
+    width: 50%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btnContinuarRes button {
+    width: 170px;
+    height: 40px;
+    font-family: "Michroma", sans-serif;
+    font-size: 25px;
+    background-color: #5fbcff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .btnContinuarRes button:hover {
+    transform: scale(1.1);
+  }
 }
