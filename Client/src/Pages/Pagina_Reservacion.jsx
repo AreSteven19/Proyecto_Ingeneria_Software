@@ -16,6 +16,57 @@ export default function Pagina_reservar() {
   const [selectedBarbero, setSelectedBarbero] = useState(null);
   const [selectedHorario, setSelectedHorario] = useState(null);
 
+  const [barberData, setBarberData] = useState({
+    services: [],
+    fecha: "",
+    hora: "",
+    barbero: "",
+  });
+
+  const handleConfirm = () => {
+    const setBarberData = {
+      services: barberData.services,
+      fecha: barberData.fecha,
+      hora: barberData.hora,
+      barbero: barberData.barbero,
+    };
+
+    fetch("URL_DE_TU_BASE_DE_DATOS", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dataToSend),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        // Realiza cualquier acción adicional después de enviar los datos
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+
+    const flecha = (
+      <svg
+        className="w-6 h-6 text-gray-800 dark:text-white"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="45"
+        height="45"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M5 12h14M5 12l4-4m-4 4 4 4"
+        />
+      </svg>
+    );
+
   const handleSelectService = (service) => {
     setSelectedServices([...selectedServices, service]);
   };
