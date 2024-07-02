@@ -6,6 +6,7 @@ import SeleccionHorario from "../components/Subcomponente/SeleccionHorario";
 import "../Styles/Style.PaginaReservacion.css";
 import imgLogo from "../Pictures/logo.png";
 import iconCalendario from "../Pictures/iconCalendario.svg";
+import iconBarber from "../Pictures/iconBarber.svg";
 
 const steps = ["Servicios", "Barbero", "Horario", "Confirmar"];
 export default function Pagina_reservar() {
@@ -95,7 +96,7 @@ export default function Pagina_reservar() {
         <SeleccionProgreso steps={steps} currentStep={currentStep} />
       </section>
 
-      <div className="containerBodyPage">
+      <div className="containerSubcompoente">
         {currentStep < 3 && (
           <div className="contentPageReservar">{renderCurrentStep()}</div>
         )}
@@ -110,14 +111,18 @@ export default function Pagina_reservar() {
               <button className="btnVolverH" onClick={goBack}>
                 {flecha}
               </button>
-              <h1 className="tittleHorario">Seleccionar Fecha y Hora</h1>
+              <h1 className="tittleHorario">Revisar y confirmar</h1>
             </div>
           )}
           <div
             className={`bodyResumen ${currentStep >= 3 ? "fullWidthBody" : ""}`}
           >
             <div className="headerResumen">
-              <img id="imgLogo" src={imgLogo} alt="" />
+              <img
+                className={`imgLogo ${currentStep >= 3 ? "fullWidthLogo" : ""}`}
+                src={imgLogo}
+                alt=""
+              />
 
               <div className="containertxtHeader">
                 <p>Geo´s Barber Shop</p>
@@ -141,20 +146,43 @@ export default function Pagina_reservar() {
                 <div className="containerServiciosRes">
                   {selectedServices.map((service) => (
                     <div className="servicioYprecio">
-                      <span className="nombreServicio">{service.name}</span>
+                      <span className="nombreServicio">- {service.name}</span>
                       <span className="precioServicio">₡{service.price}</span>
                     </div>
                   ))}
                 </div>
                 <span className="barberoRes">
-                  {selectedBarbero && <p>Barbero: {selectedBarbero.name}</p>}
+                  {selectedBarbero && (
+                    <span className="txtBarberoName">
+                      <span className="txtBarbero">
+                        <img className="iconBar" src={iconBarber}></img>{" "}
+                        {"Barbero"}
+                      </span>
+                      {selectedBarbero.name}
+                    </span>
+                  )}
                 </span>
+                {currentStep >= 4 && (
+                  <div className="Contnotasreserva">
+                    <p className="notasreservaTxt">Notas de la reserva</p>
+                    <textarea
+                      name="message"
+                      className="messageReser"
+                      cols="30"
+                      rows="5"
+                      placeholder="Mensaje"
+                      required
+                    ></textarea>
+                  </div>
+                )}
               </div>
 
               {/* Visualización del Total */}
               <div className="containerTotal">
-                <p>Total</p>
-                <p>₡{getTotal()}CRC</p>
+                <div className="totalContainer">
+                  <p>Total</p>
+                  <p>₡{getTotal()}CRC</p>
+                </div>
               </div>
             </div>
           </div>

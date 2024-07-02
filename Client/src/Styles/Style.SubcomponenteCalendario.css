@@ -1,7 +1,7 @@
 .ContainerCalendario {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
   height: 100%;
   row-gap: 10px;
@@ -11,30 +11,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 75%;
   height: 100%;
 }
 
 .react-calendar {
-  width: 80%;
+  width: 100%;
   height: 100%;
   background: #dd8f13;
   border: 1px solid #a0a096;
-  border-radius: 20px;
+  border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .horasServicio {
-  width: 100%;
+  width: 25%;
+  height: 100%;
   display: flex;
   max-width: 450px;
-  max-height: 200px;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
   overflow-y: auto;
 }
 
 .hora {
+  width: 95%;
   padding: 10px;
   background: #f0f0f0;
   border: 1px solid #a0a096;
@@ -42,7 +44,7 @@
   text-align: center;
   cursor: pointer;
   user-select: none;
-  font-size: 15px;
+  font-size: 8px;
   font-family: "Michroma", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -50,4 +52,46 @@
 
 .hora:hover {
   background: green;
+}
+
+@media screen and (width >= 768px) {
+  .ContainerCalendario {
+    flex-direction: column;
+  }
+  .react-calendar {
+    height: 100%;
+    font-size: 20px;
+  }
+
+  .ContCalendario {
+    height: 80%;
+  }
+
+  .horasServicio {
+    height: 20%;
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .hora {
+    font-size: 10px;
+    width: 40%;
+  }
+}
+
+@media screen and (width >= 1024px) and (orientation: portrait) {
+  .ContainerCalendario {
+    height: 95%;
+  }
+
+  .ContCalendario {
+    height: 35%;
+  }
+
+  .horasServicio {
+    flex-direction: column;
+    padding-top: 30px;
+    height: 80%;
+  }
 }

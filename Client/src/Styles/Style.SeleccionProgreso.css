@@ -1,24 +1,27 @@
 .container_Progreso {
   display: flex;
   flex-direction: row;
-  column-gap: 75px;
-  height: 80%;
-  width: 80%;
+  column-gap: 20px;
+  height: 100%;
+  width: 95%;
   justify-content: center;
   align-items: center;
+  font-family: "Michroma", sans-serif;
+  font-size: 11px;
 }
 
 .opcionProgreso {
-  width: 15%;
-  height: 95%;
-  text-align: center;
-  font-family: "Michroma", sans-serif;
-  font-size: 25px;
+  display: flex;
+  width: 22%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
   background-color: #4a4a4a;
-  color: white;
-  border-radius: 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 10px;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .opcionProgreso.active {
@@ -28,15 +31,84 @@
 .opcionProgreso::after {
   content: "";
   position: absolute;
-  right: -74px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 45%;
   height: 5px;
+  width: 21px;
+  right: -21px;
   background-color: #4a4a4a;
-  z-index: -1;
+  z-index: 1;
 }
 
-.opcionProgreso:last-child::after {
+.opcionProgreso:last-child:after {
   display: none;
+}
+
+@media screen and (width >= 768px) {
+  .container_Progreso {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    height: 80%;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .opcionProgreso {
+    width: 25%;
+    height: 70%;
+    text-align: center;
+    font-family: "Michroma", sans-serif;
+    font-size: 25px;
+    background-color: #4a4a4a;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .opcionProgreso.active {
+    background-color: #007bff;
+  }
+
+  .opcionProgreso::after {
+    content: "";
+    position: absolute;
+    right: -32px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20%;
+    height: 5px;
+    background-color: #4a4a4a;
+    z-index: -1;
+  }
+
+  .opcionProgreso:last-child::after {
+    display: none;
+  }
+}
+
+@media screen and (width >= 1020px) {
+  .opcionProgreso {
+    width: 15%;
+    padding: 5px;
+    box-sizing: content-box;
+  }
+
+  .opcionProgreso::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20%;
+    height: 5px;
+    background-color: #4a4a4a;
+    z-index: -1;
+  }
+}
+
+@media screen and (width >= 1250px) {
+  .opcionProgreso::after {
+    width: 15%;
+  }
 }

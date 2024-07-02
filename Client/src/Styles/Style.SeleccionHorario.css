@@ -9,8 +9,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 .containerTittleHorario {
@@ -35,17 +35,25 @@
 
 .tittleHorario {
   font-family: "Michroma", sans-serif;
-  font-size: 24px;
+  font-size: 15px;
+}
+
+.containerBarberSeleccionado {
+  width: auto;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
 }
 
 .barberoSeleccionado {
   display: flex;
   width: auto;
   height: 5%;
-  margin-left: 10px;
   background-color: white;
   font-family: "Michroma", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   border: 1px solid black;
   border-radius: 20px;
   padding: 10px;
@@ -62,5 +70,5 @@
   column-gap: 20px;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 10px;
+  padding: 5px;
 }
