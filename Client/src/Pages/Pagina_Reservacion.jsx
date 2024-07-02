@@ -193,7 +193,7 @@ export default function Pagina_reservar() {
             </div>
           </div>
           <div className="btnContinuarRes">
-            {currentStep >= 3 ? (
+            {currentStep >= 4 ? (
               <button onClick={handleConfirm}>Confirmar</button>
             ) : (
               <button onClick={() => setCurrentStep(currentStep + 1)}>
