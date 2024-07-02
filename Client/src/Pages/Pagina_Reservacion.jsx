@@ -7,6 +7,7 @@ import "../Styles/Style.PaginaReservacion.css";
 import imgLogo from "../Pictures/logo.png";
 import iconCalendario from "../Pictures/iconCalendario.svg";
 import iconBarber from "../Pictures/iconBarber.svg";
+import { createFactura } from '../api/client.api';
 
 const steps = ["Servicios", "Barbero", "Horario", "Confirmar"];
 
@@ -64,145 +65,157 @@ export default function Pagina_reservar() {
         return null;
     }
   };
-
-  const handleConfirm = () => {
+//send factura
+  const handleConfirm =  async () => {
     const dataToSend = {
-      services: selectedServices,
-      fecha: selectedHorario.date,
-      hora: selectedHorario.time,
-      barbero: selectedBarbero.name,
+      client_id_name: "name",
+      client_id_barber: selectedBarbero.name,
+      services: selectedServices.map((service)=>service.name),
+      date: selectedHorario.date,
+      time: selectedHorario.time,
+     price: selectedServices.map((service)=>service.price),
+     total: getTotal(),
     };
-    console.log(dataToSend);
+    
+    try {
+
+      const response =await createFactura(dataToSend)
+      
+    } catch (error) {
+      console.error("Error al guardar datos", error)
+    }
   };
 
-  return (
-    <div className="ContainerPage">
-      <section className="container_BarProgres">
-        <SeleccionProgreso steps={steps} currentStep={currentStep} />
-      </section>
 
-      <div className="containerSubcompoente">
-        {currentStep < 3 && (
-          <div className="contentPageReservar">{renderCurrentStep()}</div>
-        )}
 
-        <div
-          className={`ResumenSelecciones ${
-            currentStep >= 3 ? "fullWidth" : ""
+
+return (
+  <div className="ContainerPage">
+    <section className="container_BarProgres">
+      <SeleccionProgreso steps={steps} currentStep={currentStep} />
+    </section>
+
+    <div className="containerSubcompoente">
+      {currentStep < 3 && (
+        <div className="contentPageReservar">{renderCurrentStep()}</div>
+      )}
+
+      <div
+        className={`ResumenSelecciones ${currentStep >= 3 ? "fullWidth" : ""
           }`}
+      >
+        {currentStep >= 3 && (
+          <div className="containerTittleStepFinal">
+            <button className="btnVolverH" onClick={goBack}>
+              <svg
+                className="w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="45"
+                height="45"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 12h14M5 12l4-4m-4 4 4 4"
+                />
+              </svg>
+            </button>
+            <h1 className="tittleHorario">Revisar y confirmar</h1>
+          </div>
+        )}
+        <div
+          className={`bodyResumen ${currentStep >= 3 ? "fullWidthBody" : ""}`}
         >
-          {currentStep >= 3 && (
-            <div className="containerTittleStepFinal">
-              <button className="btnVolverH" onClick={goBack}>
-                <svg
-                  className="w-6 h-6 text-gray-800 dark:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="45"
-                  height="45"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 12h14M5 12l4-4m-4 4 4 4"
-                  />
-                </svg>
-              </button>
-              <h1 className="tittleHorario">Revisar y confirmar</h1>
-            </div>
-          )}
-          <div
-            className={`bodyResumen ${currentStep >= 3 ? "fullWidthBody" : ""}`}
-          >
-            <div className="headerResumen">
-              <img
-                className={`imgLogo ${currentStep >= 3 ? "fullWidthLogo" : ""}`}
-                src={imgLogo}
-                alt=""
-              />
+          <div className="headerResumen">
+            <img
+              className={`imgLogo ${currentStep >= 3 ? "fullWidthLogo" : ""}`}
+              src={imgLogo}
+              alt=""
+            />
 
-              <div className="containertxtHeader">
-                <p>Geo´s Barber Shop</p>
-                <p>Agua buena, Agua Buena</p>
-              </div>
+            <div className="containertxtHeader">
+              <p>Geo´s Barber Shop</p>
+              <p>Agua buena, Agua Buena</p>
             </div>
-            <div className="containerResumenGeneral">
-              <div className="servicioAgregado">
-                {currentStep >= 3 && (
-                  <p className="resumenFinaltxt">Resumen de la cita</p>
-                )}
-                {selectedHorario && (
-                  <p className="horarioReservado">
-                    <img
-                      className="iconCal"
-                      src={iconCalendario}
-                      alt="Calendario"
-                    ></img>{" "}
-                    <span className="txtHorarioD">{selectedHorario.date}</span>
-                    <span className="txtHorarioT">{selectedHorario.time}</span>
-                  </p>
-                )}
-                <div className="containerServiciosRes">
-                  {selectedServices.map((service, index) => (
-                    <div className="servicioYprecio" key={index}>
-                      <span className="nombreServicio">- {service.name}</span>
-                      <span className="precioServicio">₡{service.price}</span>
-                    </div>
-                  ))}
-                </div>
-                {selectedBarbero && (
-                  <span className="barberoRes">
-                    <span className="txtBarberoName">
-                      <span className="txtBarbero">
-                        <img
-                          className="iconBar"
-                          src={iconBarber}
-                          alt="Barbero"
-                        ></img>
-                        {" Barbero"}
-                      </span>
-                      {selectedBarbero.name}
-                    </span>
-                  </span>
-                )}
-                {currentStep >= 4 && (
-                  <div className="Contnotasreserva">
-                    <p className="notasreservaTxt">Notas de la reserva</p>
-                    <textarea
-                      name="message"
-                      className="messageReser"
-                      cols="30"
-                      rows="5"
-                      placeholder="Mensaje"
-                      required
-                    ></textarea>
+          </div>
+          <div className="containerResumenGeneral">
+            <div className="servicioAgregado">
+              {currentStep >= 3 && (
+                <p className="resumenFinaltxt">Resumen de la cita</p>
+              )}
+              {selectedHorario && (
+                <p className="horarioReservado">
+                  <img
+                    className="iconCal"
+                    src={iconCalendario}
+                    alt="Calendario"
+                  ></img>{" "}
+                  <span className="txtHorarioD">{selectedHorario.date}</span>
+                  <span className="txtHorarioT">{selectedHorario.time}</span>
+                </p>
+              )}
+              <div className="containerServiciosRes">
+                {selectedServices.map((service, index) => (
+                  <div className="servicioYprecio" key={index}>
+                    <span className="nombreServicio">- {service.name}</span>
+                    <span className="precioServicio">₡{service.price}</span>
                   </div>
-                )}
+                ))}
               </div>
-
-              <div className="containerTotal">
-                <div className="totalContainer">
-                  <p>Total</p>
-                  <p>₡{getTotal()}CRC</p>
+              {selectedBarbero && (
+                <span className="barberoRes">
+                  <span className="txtBarberoName">
+                    <span className="txtBarbero">
+                      <img
+                        className="iconBar"
+                        src={iconBarber}
+                        alt="Barbero"
+                      ></img>
+                      {" Barbero"}
+                    </span>
+                    {selectedBarbero.name}
+                  </span>
+                </span>
+              )}
+              {currentStep >= 4 && (
+                <div className="Contnotasreserva">
+                  <p className="notasreservaTxt">Notas de la reserva</p>
+                  <textarea
+                    name="message"
+                    className="messageReser"
+                    cols="30"
+                    rows="5"
+                    placeholder="Mensaje"
+                    required
+                  ></textarea>
                 </div>
+              )}
+            </div>
+
+            <div className="containerTotal">
+              <div className="totalContainer">
+                <p>Total</p>
+                <p>₡{getTotal()}CRC</p>
               </div>
             </div>
           </div>
-          <div className="btnContinuarRes">
-            {currentStep >= 4 ? (
-              <button onClick={handleConfirm}>Confirmar</button>
-            ) : (
-              <button onClick={() => setCurrentStep(currentStep + 1)}>
-                Continuar
-              </button>
-            )}
-          </div>
+        </div>
+        <div className="btnContinuarRes">
+          {currentStep >= 4 ? (
+            <button onClick={handleConfirm}>Confirmar</button>
+          ) : (
+            <button onClick={() => setCurrentStep(currentStep + 1)}>
+              Continuar
+            </button>
+          )}
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 }
