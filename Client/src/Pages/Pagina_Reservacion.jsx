@@ -73,6 +73,7 @@ export default function Pagina_reservar() {
       barbero: selectedBarbero.name,
     };
 
+    console.log("corrección realizada");
     console.log(dataToSend);
   };
 
