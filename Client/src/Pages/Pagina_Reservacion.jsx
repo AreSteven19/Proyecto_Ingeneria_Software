@@ -72,6 +72,7 @@ export default function Pagina_reservar() {
       hora: selectedHorario.time,
       barbero: selectedBarbero.name,
     };
+
     console.log(dataToSend);
   };
 
