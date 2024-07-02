@@ -5,6 +5,7 @@ import Navbar2 from "./components/Navbar2.jsx";
 import PaginaP from "./Pages/pagina_principal.jsx";
 import LoginC from "./components/Login.jsx";
 import Pagina_reservacion from "./Pages/Pagina_Reservacion.jsx";
+import Pagina_perfil from "./Pages/Pagina_perfil.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Pagina_reservacion" element={<Pagina_reservacion />} />
           <Route path="/" element={<PaginaP />} />
           <Route path="/navbar" element={<Navbar2 />} />
+          <Route path="/Pagina_perfil" element={<Pagina_perfil />} />
         </Routes>
       </BrowserRouter>
     </div>
