@@ -72,8 +72,6 @@ export default function Pagina_reservar() {
       hora: selectedHorario.time,
       barbero: selectedBarbero.name,
     };
-
-    console.log("corrección realizada");
     console.log(dataToSend);
   };
 
@@ -195,7 +193,7 @@ export default function Pagina_reservar() {
             </div>
           </div>
           <div className="btnContinuarRes">
-            {currentStep >= 5 ? (
+            {currentStep >= 3 ? (
               <button onClick={handleConfirm}>Confirmar</button>
             ) : (
               <button onClick={() => setCurrentStep(currentStep + 1)}>
