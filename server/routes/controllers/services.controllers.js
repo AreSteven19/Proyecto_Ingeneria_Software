@@ -31,9 +31,9 @@ export const getService = async (req, res) => {
 export const createService = async (req, res) => {
 
     try {
-        const { name, description, price} = req.body;
-        await pool.query(" insert into service (name, description, price) values (?,?,?)",
-            [name, description, price]);
+        const { name,time, description, price} = req.body;
+        await pool.query(" insert into service (name, time, description, price) values (?,?,?,?)",
+            [name,time, description, price]);
         //console.log([resul]);
         res.send('creando services');
         }
