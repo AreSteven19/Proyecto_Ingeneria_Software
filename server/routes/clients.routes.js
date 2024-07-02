@@ -16,6 +16,8 @@ import {
     deleteService
 } from '../routes/controllers/services.controllers.js'
 
+import {getFacturas,getFactura,createFactura,updateFactura,deleteFactura } from '../routes/controllers/factura.controllers.js'
+
 
 const router = Router();
 
@@ -31,6 +33,12 @@ router.get('/services/:id', getService);
 router.post('/services', createService);
 router.put('/services/:id', updateService);
 router.delete('/services/:id', deleteService);
+
+router.get('/factura', getFacturas);
+router.get('/factura/:id', getFactura);
+router.post('/factura', createFactura);
+router.put('/factura/:id', updateFactura);
+router.delete('/factura/:id', deleteFactura);
 
 export	default router
 
